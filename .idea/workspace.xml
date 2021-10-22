@@ -58,6 +58,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="2a3c2ba8-ada8-4101-bf53-4477d9fca095" name="Default Changelist" comment="Euler">
+      <change afterPath="$PROJECT_DIR$/Euler/166/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Euler/166/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Euler/53/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Euler/53/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Euler/54/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Euler/54/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Euler/92/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Euler/92/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Euler/26/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Euler/26/script.js" afterDir="false" />
+=======
     <list default="true" id="e0e7126f-1ade-4eef-a05c-84e2db8a3370" name="Default Changelist" comment="Euler">
       <change afterPath="$PROJECT_DIR$/JavaScript/Generator/index.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/JavaScript/Generator/script.js" afterDir="false" />
@@ -65,6 +78,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaScript/RxJs/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/RxJs/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Javascript/RxJs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javascript/RxJs/index.html" afterDir="false" />
+>>>>>>> 24076d859be3393e2167cb28ecdc171c6cc536a2
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,12 +99,27 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Documents and Settings" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Wouter\AppData\Roaming\npm\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="ts.external.directory.path" value="C:\Users\Wouter\source\repos\Experimental\JavaScript\Angular\tst-proj\node_modules\typescript\lib" />
+=======
     <property name="idea.background.editor" value="C:\Users\Wouter\Pictures\yellow.png,6,scale,center" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/JavaScript" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Wouter\AppData\Roaming\npm\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="C:\Users\Wouter\source\repos\Knowledge\JavaScript\RxJs\node_modules\typescript\lib" />
+>>>>>>> 24076d859be3393e2167cb28ecdc171c6cc536a2
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -126,6 +155,34 @@
       <created>1597422644822</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< HEAD
+      <updated>1593792617625</updated>
+      <workItem from="1593792618987" duration="1082000" />
+      <workItem from="1596200611871" duration="4619000" />
+      <workItem from="1596468351523" duration="1484000" />
+      <workItem from="1596518069177" duration="7821000" />
+      <workItem from="1596605694582" duration="2156000" />
+      <workItem from="1596972590592" duration="11066000" />
+      <workItem from="1615923429910" duration="5373000" />
+      <workItem from="1616180058568" duration="11294000" />
+      <workItem from="1616481932347" duration="596000" />
+      <workItem from="1616483299329" duration="2000" />
+      <workItem from="1617649764021" duration="214000" />
+      <workItem from="1617823767218" duration="572000" />
+      <workItem from="1618388751227" duration="4048000" />
+      <workItem from="1618392857801" duration="106000" />
+      <workItem from="1618393089651" duration="215000" />
+      <workItem from="1619603810545" duration="306000" />
+      <workItem from="1619727669207" duration="341000" />
+      <workItem from="1619813514543" duration="2570000" />
+      <workItem from="1619859937772" duration="597000" />
+      <workItem from="1622228708518" duration="1396000" />
+      <workItem from="1622524429712" duration="17000" />
+      <workItem from="1624563028410" duration="123000" />
+      <workItem from="1625601712364" duration="1776000" />
+      <workItem from="1625603649320" duration="60000" />
+      <workItem from="1625682426473" duration="1005000" />
+=======
       <updated>1597422644822</updated>
       <workItem from="1597422646084" duration="5954000" />
       <workItem from="1597468282040" duration="5032000" />
@@ -137,6 +194,7 @@
       <workItem from="1604324165132" duration="5415000" />
       <workItem from="1604390404051" duration="601000" />
       <workItem from="1604395452136" duration="610000" />
+>>>>>>> 24076d859be3393e2167cb28ecdc171c6cc536a2
     </task>
     <task id="LOCAL-00001" summary="Euler">
       <created>1597429679242</created>
@@ -198,6 +256,20 @@
     <option name="LAST_COMMIT_MESSAGE" value="Error flow" />
   </component>
   <component name="WindowStateProjectService">
+<<<<<<< HEAD
+    <state x="76" y="237" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1619603890459">
+      <screen x="0" y="0" width="1563" height="1002" />
+    </state>
+    <state x="76" y="237" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1563.1002@0.0.1563.1002" timestamp="1619603890459" />
+    <state x="562" y="256" key="FileChooserDialogImpl" timestamp="1616228530761">
+      <screen x="0" y="0" width="1563" height="1002" />
+    </state>
+    <state x="562" y="256" key="FileChooserDialogImpl/0.0.1563.1002@0.0.1563.1002" timestamp="1616228530761" />
+    <state x="102" y="104" width="578" height="801" key="find.popup" timestamp="1616314719906">
+      <screen x="0" y="0" width="1563" height="1002" />
+    </state>
+    <state x="102" y="104" width="578" height="801" key="find.popup/0.0.1563.1002@0.0.1563.1002" timestamp="1616314719906" />
+=======
     <state x="740" y="335" key="FileChooserDialogImpl" timestamp="1598084051786">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -255,5 +327,6 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="623" y="255" width="672" height="678" key="search.everywhere.popup/1920.293.1440.860/0.0.1920.1160/-1080.0.1080.1880@0.0.1920.1160" timestamp="1597469046052" />
+>>>>>>> 24076d859be3393e2167cb28ecdc171c6cc536a2
   </component>
 </project>
