@@ -1,17 +1,18 @@
 {
-    "name": "rxjs-playground",
+    "name": "playground",
+    "private": true,
     "version": "1.0.0",
     "description": "",
     "main": "script.js",
     "scripts": {
         "start": "webpack-dev-server --mode development"
     },
-    "author": "",
+    "author": "Wouter van Koppen <wvkoppen@gmail.com>",
     "license": "ISC",
     "dependencies": {
-        "rxjs": "^7.1.0",
+        "rxjs": "^7.4.0",
         "ts-loader": "^8.0.2",
-        "typescript": "^4.3.4",
+        "typescript": "^4.4.4",
         "webpack": "^4.44.1",
         "webpack-cli": "^3.3.12",
         "webpack-dev-server": "^3.11.0"
