@@ -5,7 +5,7 @@
     "description": "",
     "main": "script.js",
     "scripts": {
-        "start": "webpack-dev-server --mode development",
+        "start": "webpack-dev-server --mode development --open",
         "fix": "prettier -w ./src"
     },
     "author": "Wouter van Koppen <wvkoppen@gmail.com>",
