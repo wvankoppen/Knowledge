@@ -1,4 +1,4 @@
-import { demo } from './bootstrapper';
+import { demo } from './framework/bootstrapper';
 
 demo(webComponent);
 

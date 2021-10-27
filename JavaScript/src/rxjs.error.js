@@ -1,10 +1,10 @@
 import { of, throwError } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { demo } from './bootstrapper';
+import { demo } from './framework/bootstrapper';
 
-demo(error);
+demo(rxjsError);
 
-function error() {
+function rxjsError() {
     console.log('Reactive throw:');
     of(1)
         .pipe(switchMap((_) => throwError('oops!!')))

@@ -1,4 +1,4 @@
-import { demo } from './bootstrapper';
+import { demo } from './framework/bootstrapper';
 
 demo(asyncAwait);
 
@@ -8,7 +8,7 @@ async function asyncAwait() {
     console.log('Im too soon!');
 
     console.log(await func());
-    console.log('I just have waited');
+    console.log('I just have been waited');
 
     console.log(func2());
     console.log('Done 2');

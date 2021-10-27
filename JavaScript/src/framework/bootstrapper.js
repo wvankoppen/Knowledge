@@ -1,7 +1,7 @@
 const demos = [];
 
-export const demo = (func) => {
-    demos.push({ name: func.name, func });
+export const demo = (loader) => {
+    demos.push({ name: loader.name, loader });
 };
 
 export const render = () => {
@@ -9,7 +9,10 @@ export const render = () => {
     demos.forEach((demo) => {
         const button = document.createElement('button');
         button.innerText = demo.name;
-        button.addEventListener('click', demo.func);
+        button.addEventListener('click', (_) => {
+            console.clear();
+            demo.loader();
+        });
         toolbar.appendChild(button);
     });
 };

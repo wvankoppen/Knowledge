@@ -1,4 +1,4 @@
-import { demo } from './bootstrapper';
+import { demo } from './framework/bootstrapper';
 
 demo(enumerateIterable);
 
@@ -15,4 +15,5 @@ function enumerateIterable() {
     for (const el in arr) {
         console.log(el);
     }
+    console.groupEnd();
 }

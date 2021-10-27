@@ -1,6 +1,6 @@
 import { interval } from 'rxjs';
 import { share, take } from 'rxjs/operators';
-import { demo } from './bootstrapper';
+import { demo } from './framework/bootstrapper';
 import { proxy } from './lib/proxy';
 
 function shareTest1() {

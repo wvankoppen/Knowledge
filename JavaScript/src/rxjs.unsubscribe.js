@@ -1,9 +1,9 @@
 import { of } from 'rxjs';
-import { demo } from './bootstrapper';
+import { demo } from './framework/bootstrapper';
 
-demo(unsubscribe);
+demo(rxjsUnsubscribe);
 
-function unsubscribe() {
+function rxjsUnsubscribe() {
     console.log('unsub');
     const obs$ = of(1);
     const sub = obs$.subscribe(console.log);

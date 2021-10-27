@@ -1,11 +1,11 @@
 import { Observable } from 'rxjs';
-import { demo } from './bootstrapper';
+import { demo } from './framework/bootstrapper';
 import { proxy } from './lib/proxy';
 import { tap } from 'rxjs/operators';
 
-demo(producer);
+demo(rxjsProducer);
 
-function producer() {
+function rxjsProducer() {
     console.log('Start producer');
 
     const producer = (subscriber) => {

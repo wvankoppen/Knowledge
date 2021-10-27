@@ -7,12 +7,12 @@ import {
     switchMap,
     toArray,
 } from 'rxjs/operators';
-import { demo } from './bootstrapper';
+import { demo } from './framework/bootstrapper';
 import { proxy } from './lib/proxy';
 
-demo(sequencer);
+demo(rxjsSequencer);
 
-function sequencer() {
+function rxjsSequencer() {
     const arr = [200, 2000, 2];
     const reqs = from(arr).pipe(
         map((i) =>
