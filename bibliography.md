@@ -18,12 +18,19 @@
 |     Software   Architecture For Developers                |     Brown,   Simon                    |     What is   architecture, designing, sketches                                            |
 |     Clean   Architecture                                  |     Martin,   Robert C.               |                                                                                            |
 
+
+### JavaScript
+
+1. You Don't Know JS books (Kyle Simpson)
+2. Understanding ECMAScript 6 (Nicholas C. Zakas)
+
+
 ### Mentoring books
-|     Title                                                 |     Author                            |     Description                                             |   
-|---------------------------|---------------------------------------|---------------------------------------------------------------------------------------------|
-| The   Clean Coder         | Martin,   Robert C.                   | Professionalism,   Saying yes/no, Testing, Time management, Estimation, Pressure, Mentoring |
-| Apprenticeship   Patterns | Hoover,   David H. & Adewale Oshineye | Patterns   to apply on your career                                                          |
-| The   expert beginner     | Erik   Dietrich                       | Cognitive   dissonance                                                                      |
+| Rank |     Title                                                 |     Author                            |     Description                                             |   
+|------|---------------------------|---------------------------------------|---------------------------------------------------------------------------------------------|
+| 1    | The   Clean Coder         | Martin,   Robert C.                   | Professionalism,   Saying yes/no, Testing, Time management, Estimation, Pressure, Mentoring |
+| 2    | Apprenticeship   Patterns | Hoover,   David H. & Adewale Oshineye | Patterns   to apply on your career                                                          |
+| 3    | The   expert beginner     | Erik   Dietrich                       | Cognitive   dissonance                                                                      |
 
 
 ## Websites  
@@ -31,6 +38,12 @@
    - [Pluralsight](http://www.pluralsight.com)
    - [W3schools](http://w3schools.com)
    - [Mozilla MDN Web Docs](http://developer.mozilla.org)
-   - [Angular blog](http://blog.angular.io)
-   - [Medium](http://medium.com)
    - [StackOverflow](http://stackoverflow.com)
+
+### Blogs  
+   - [Angular blog](https://blog.angular.io)
+   - [In Depth Dev](https://indepth.dev)
+   - [HelloJS blog](https://blog.hellojs.org)
+   - [Allen Holub](https://holub.com)
+   - [Medium](https://medium.com)
+       - [Eric Elliott blog](https://medium.com/@_ericelliott)
