@@ -3,20 +3,20 @@
 ## Books
 ### Programming
 
-|     Title                                                 |     Author                            |     Description                                                       |
-|-----------------------------------------------------------|---------------------------------------|--------------------------------------------------------------------------------------------|
-|     Clean   Code (Java)                                   |     Martin,   Robert C.               |     How to   write nice code, coding standards                                             |
-|     Refactoring   to Patterns                             |     Joshua   Kerievsky                |     Step-by-step   guide on how to refactor your code to patterns                          |
-|     Patterns   of Enterprise Application Architecture     |     Martin   Fowler                   |     P1:   Narratives, P2: Patterns (Database, ORM, Layering, Concurrency, Session, Web)    |
-|     97   Things Every Programmer Should Know              |     _multiple_                                  |     General tips on programming                                                            |
-|     97   Things Every Software Architect Should Know      |     _multiple_                                 |     General tips on architecture                                                           |
-|     The   Pragmatic Programmer                            |     Hunt,   Andrew - Thomas, David    |     70 good   tips among different scenarios                                               |
-|     Working   Effectively with Legacy Code                |     Feathers,   Michael               |     Object   / method Seams, techniques for dealing with legacy code                       |
-|     Framework   Design Guidelines                         |     Krzysztof   Cwalina               |     Good   tips about .NET development                                                     |
-|     Understanding   the Four Rules of Simple Design       |     Haines,   Corey                   |     How to   design simple programs and write simple tests                                 |
-|     Design   Patterns                                     |     GOF                               |     Classical   collection of design patterns                                              |
-|     Software   Architecture For Developers                |     Brown,   Simon                    |     What is   architecture, designing, sketches                                            |
-|     Clean   Architecture                                  |     Martin,   Robert C.               |                                                                                            |
+|     Title                                                 |     Author                            | Description                                                                        |
+|-----------------------------------------------------------|---------------------------------------|------------------------------------------------------------------------------------|
+|     Clean   Code (Java)                                   |     Martin,   Robert C.               | How to   write nice code, coding standards                                         |
+|     Refactoring   to Patterns                             |     Joshua   Kerievsky                | Step-by-step   guide on how to refactor your code to patterns                      |
+|     Patterns   of Enterprise Application Architecture     |     Martin   Fowler                   | P1:   Narratives, P2: Patterns (Database, ORM, Layering, Concurrency, Session, Web) |
+|     97   Things Every Programmer Should Know              |     _multiple_                                  | General tips on programming                                                        |
+|     97   Things Every Software Architect Should Know      |     _multiple_                                 | General tips on architecture                                                       |
+|     The   Pragmatic Programmer                            |     Hunt,   Andrew - Thomas, David    | 70 good programming-related tips                                            |
+|     Working   Effectively with Legacy Code                |     Feathers,   Michael               | Object   / method Seams, techniques for dealing with legacy code                   |
+|     Framework   Design Guidelines                         |     Krzysztof   Cwalina               | Good   tips about .NET development                                                 |
+|     Understanding   the Four Rules of Simple Design       |     Haines,   Corey                   | How to   design simple programs and write simple tests                             |
+|     Design   Patterns                                     |     GOF                               | Classical   collection of design patterns                                          |
+|     Software   Architecture For Developers                |     Brown,   Simon                    | What is   architecture, designing, sketches                                        |
+|     Clean   Architecture                                  |     Martin,   Robert C.               |                                                                                    |
 
 
 ### JavaScript
