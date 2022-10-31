@@ -1,7 +1,7 @@
 const demos = [];
 
-export const demo = (loader) => {
-    demos.push({ name: loader.name, loader });
+export const demo = (run) => {
+    demos.push({ name: run.name, run });
 };
 
 export const render = () => {
@@ -11,7 +11,8 @@ export const render = () => {
         button.innerText = demo.name;
         button.addEventListener('click', (_) => {
             console.clear();
-            demo.loader();
+            console.log(demo.name);
+            demo.run();
         });
         toolbar.appendChild(button);
     });
