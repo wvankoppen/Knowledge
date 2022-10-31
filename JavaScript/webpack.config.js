@@ -2,8 +2,8 @@ const path = require('path');
 const glob = require('glob');
 
 module.exports = {
-    entry:  {
-        js: glob.sync("./src/**/*.js"),
+    entry: {
+        js: glob.sync('./src/**/*.js'),
     },
     output: {
         filename: 'main.js',

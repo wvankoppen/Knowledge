@@ -2,40 +2,40 @@ import { demo } from './framework/bootstrapper';
 demo(reduce);
 
 function reduce() {
-    //
-    // console.group('Summation example');
-    //
-    // const numbers = [10, 2, 8, 15];
-    // let result = numbers.reduce((acc, curr) => {
-    //     console.log(acc, curr);
-    //     return acc + curr;
-    // });
-    //
-    // console.log(result);
-    // console.groupEnd();
-    //
-    // console.log(
-    //     '=========================================================================='
-    // );
-    // console.group('Flatten tree example');
-    //
-    // const name = [
-    //     ['w', 'o', 'u', 't', 'e', 'r'],
-    //     ['v', ['a', ['n', ['k']]]],
-    // ];
-    //
-    // function flatten(data) {
-    //     console.log('flatten', data);
-    //
-    //     return data.reduce((acc, curr) => {
-    //         console.log('reduce', acc, curr);
-    //         const extra = Array.isArray(curr) ? flatten(curr) : curr;
-    //         return acc.concat(extra);
-    //     }, []);
-    // }
-    //
-    // console.log(flatten(name));
-    // console.groupEnd();
+
+    console.group('Summation example');
+
+    const numbers = [10, 2, 8, 15];
+    const result1= numbers.reduce((acc, curr) => {
+        console.log(acc, curr);
+        return acc + curr;
+    });
+
+    console.log(result1);
+    console.groupEnd();
+
+    console.log(
+        '=========================================================================='
+    );
+    console.group('Flatten tree example');
+
+    const name = [
+        ['w', 'o', 'u', 't', 'e', 'r'],
+        ['v', ['a', ['n', ['k']]]],
+    ];
+
+    function flatten(data) {
+        console.log('flatten', data);
+
+        return data.reduce((acc, curr) => {
+            console.log('reduce', acc, curr);
+            const extra = Array.isArray(curr) ? flatten(curr) : curr;
+            return acc.concat(extra);
+        }, []);
+    }
+
+    console.log(flatten(name));
+    console.groupEnd();
 
     console.log(
         '=========================================================================='
