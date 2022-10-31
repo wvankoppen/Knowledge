@@ -10,8 +10,8 @@ export const render = () => {
         const button = document.createElement('button');
         button.innerText = demo.name;
         button.addEventListener('click', (_) => {
-            console.clear();
-            console.log(demo.name);
+            console.groupEnd();
+            console.group(demo.name);
             demo.run();
         });
         toolbar.appendChild(button);
