@@ -3,18 +3,21 @@ import { demo } from './framework/bootstrapper';
 demo(scoping);
 
 function scoping() {
-    function anotherfunc() {
-        var anotherfuncvar = 1;
-        console.debug(this);
+
+    function anotherFunc() {
+        var anotherFuncVar = 1;
+        console.debug('this in anotherFunc', this);
     }
 
-    function myfunc() {
-        var myfuncvar = 2;
-        console.debug(this);
-        Function.prototype.call(this, 'anotherfunc', myfuncvar);
+    function myFunc() {
+        var myFuncVar = 2;
+        console.debug('this in myFunc', this);
+        Function.prototype.call(this, 'anotherFunc', myFuncVar);
     }
 
-    myfunc();
+    myFunc();
+
+
 
     var obj = {};
 
