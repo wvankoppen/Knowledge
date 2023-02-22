@@ -8,16 +8,18 @@ function object() {
     const obj = Object.create(proto);
     obj.ownProp = 2;
 
-    // for..in is for enumerable
+    console.group('for..in is (for enumerable)');
     for (const k in obj) {
-        console.log('for..in', k);
+        console.log(k);
     }
+    console.groupEnd();
 
-    // for..of is for iterable (hence array)
+    console.group('for..of is for iterable (hence array)');
     for (const k of Object.entries(obj)) {
-        console.log('for..of', k);
+        console.log(k);
     }
+    console.groupEnd();
 
     const ownProps = Array.from(obj);
-    console.log(ownProps);
+    console.log('only own props', ownProps);
 }
