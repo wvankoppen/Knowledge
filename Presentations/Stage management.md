@@ -2,28 +2,108 @@ Talk is not about the fundamentals of NgRx.
 Why not? Getting Started Course alone takes already more than half a day: https://app.pluralsight.com/library/courses/angular-ngrx-getting-started/table-of-contents
 The Newest stuff in v15: https://ngrx.io/guide/migration/v15
 
-Goal: Explain the main architectural decisions you need to make when using NgRx?
+Goal: What are the main takeaways to have a sound app architecture using NgRx?
 Questions:
 - How do I architect the state of my apps and components?
-  - When to use Store or ComponentStore?
-  - When to use entity?
+- What does state mean for apps 
+- What does state mean for components
 
 ## Outline
-  - What state means for apps and (library) components
-  - Hierarchical app state
-  - What state should be put in the store, and what not?
-  - Show pro/cons of component store
 
 ###############################################
 
 # What state means for apps and (library) components
-- Do you need a state management framework?
-  For a presentational components only, probably not. 
-  Container components usually need state, (not necessarily in components itself) either a service or a state management solution. 
-  Wire app state to your container components via Store.
-- State ownership: App or component
-  - App: Store logical choice, unless you need dynamically created components, then Component Store
-  - Container component: App state if you need the pros (Debugging, Actions), Component Store if you need multipe instances
+
+## Do you need a state management framework?
+For a simple app (TODO management app?) probably not.
+A service with a subject holding the todo items probably suffices.
+NgRx is not intended to make simple things even simpler.
+
+Having said that, and if you have a complex app for which the state needs to be accessed by many components and services, and is impacted by actions from different sources.
+
+
+# The domain must be leading 
+
+- Teachers
+  - Teacher
+    - Courses
+
+Create a module structure
+
+- TeachersModule
+  - TeacherModule
+    - CoursesModule
+
+Separate state modules when in doubt!
+If your teacher1 page shows all its courses, it does not mean it should be part of the same state module.
+
+- TeachersStateModule
+  - TeacherStateModule
+  - CoursesStateModule
+
+Also take into account cross-cutting functionality:
+AppStateModule: Good to implement Cross-cutting concerns here: Panels, Dialogs, IsOnline,
+
+Hierarchical state also on folder level!
+State modules can use parents and if imported siblings
+State modules cannot use their children (and you should not want to), use router to navigate!
+Let the feature modules load your state modules
+
+
+
+## What state needs to be kept during app lifetime?
+- /projects/1/customers (customer subset)
+- /customers (all customers)
+
+Can create a CustomerState module and reuse, but you also reuse the state!
+Consider a separate ProjectCustomerStateModule
+Do sibling/child modules need this state?
+
+-> Keep in mind what state needs to be kept and shared during app lifetime
+
+
+## What deep links do exist in your app?
+E.g.
+- /projects
+- /projects/1
+- /projects/1/items
+- /projects/1/items/1
+
+This could result in the following state modules:
+- ProjectsState, 
+- ProjectState, 
+- ProjectItemsState, 
+- ProjectItemState, 
+
+
+
+- /customers
+- /customers/1
+- /customers/1/projects
+
+If your customer page has a dialog to list the invoices for that customer, you could 
+
+-> Keep in mind what can be deep linked!
+
+
+
+
+
+## State management cardinality
+### Module / singleton: 
+Centralized immutable state
+Hierarchy
+Tooling (DevTools)
+Inter-component communication
+
+### Container component / NOT singleton
+
+Container components usually need state, (not necessarily in components itself) either a service or a state management solution. Wire app state to your container components via Store.
+
+
+
+### TODO
+App state if you need the pros (Debugging, Actions), Component Store if you need multipe instances
 
 
 # Component store
@@ -41,19 +121,6 @@ Store:
 - More scalable
 - DevTools!
 
-
-
-# Hierarchical state
-- AppStateModule: Good to implement Cross-cutting concerns here: Panels, Dialogs, IsOnline, 
-- Separate feature state modules (functional)
-- Separate technical
-- State per page / Dedicated state module
-  - Sometimes it will happen that both components need the state
-- Routing dictates what can be deep linked
-- Hierarchical state also on folder level! 
-- State modules can use parents and if imported siblings
-- State modules cant use childs (and you should not want to), use router
-- Let the feature modules load your state modules
 
 
 Conclusion:
