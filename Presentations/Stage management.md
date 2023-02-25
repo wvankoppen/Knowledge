@@ -1,32 +1,39 @@
 State Management in Angular using NgRx.
 
-Talk is not about the fundamentals of NgRx.
-Why not? Getting Started Course alone takes already more than half a day: https://app.pluralsight.com/library/courses/angular-ngrx-getting-started/table-of-contents
-The Newest stuff in v15: https://ngrx.io/guide/migration/v15
+Talk is not a "Getting Started" or "Fundamentals" course about NgRx.
 
-
-Goal: What are the main takeaways to have a sound app architecture using NgRx?
+I like to give you my personal takeaways on improving your app architecture using NgRx.
 
 
 ## Outline
+- NgRx: Do I need it?
+- App architecture matters
+- What (not) to store
+- Hierarchical modules, hierarchical state
+- Sharing state
+- State ownership
 
-###############################################
+## NgRx: Do I need it?
+If you need a State Management solution, you know you need it.
 
-
-## Do you need NgRx (or a state management framework in general)?
-For a simple app (e.g. ToDo management), probably not.
+So: For a simple app (e.g. ToDo management), it's probably not needed.
 A service having a Subject holding the todo items probably suffices.
 
 So: NgRx is not intended to make simple things even more simple.
 It is intended to make difficult things less difficult.
 
-If you have a complex app for which:
-- the state needs to be accessed by many components and services, 
+
+NgRx might be a good choice if you have a complex app for which:
+- the state needs to be accessed by many components, 
 - and is impacted by actions from different sources.
 
 
-## The architecture of the app must be sound
+
+## App architecture matters
 A good start is to create feature modules per page
+
+- Each container component in a separate module.
+
 
 Sample domain model
 - Teachers
@@ -41,11 +48,54 @@ Create a feature module structure
 
 These modules could be lazy loaded using the router config.
 
--> Hierarchical module tree should match de domain
+-> Takeaway 1: The hierarchical module tree of your app should match the domain
+
+## What (not) to store
+
+First, WHY do we store state in the first place?
+
+Principles:
+1. Single source of truth 
+2. State is read only
+3. Changes are made via pure functions (reducers)
+
+Advantages:
+- Centralized, immutable state (hydrate state via LocalStorage)
+- Performance (OnPush)
+- Testability (pure functions easy to test)
+- Tooling! (look whether state correct, no logging)
+- Component communication (inject Store)
 
 
-## Use the Store for hierarchical state
+Think about 
+1. what state needs to be shared across your app.
+2. whether it respects the Redux principles 
+
+E.g.: Teacher list, Courses list 
+
+
+-> Takeaway 2: Think about what state relations are needed in your app
+
+What NOT to store:
+State that cannot respect the principles, e.g.:
+- mutual state (Leaflet instance)
+Nuance: technically you can, by configuration, but you should not use it
+- or short-lived and small-scoped state
+
+Where do we store this state? Angular Service!
+   
+
+-> Takeaway 3: When needed, share mutable state using a service
+
+
+## Hierarchical modules, hierarchical state
+Identify state modules in your app.
 Each feature module can import state module for state that it needs.
+
+Explain ![](https://ngrx.io/generated/images/guide/store/state-management-lifecycle.png)
+- Each state module can contain Selectors, Store, Reducer, Actions, Effects (and services) 
+- Not components, as they are in the View Component Modules 
+- The components can use the state as their module import the state module.
 
 Split up state modules when in doubt!
 If the specific teacher page shows all its courses, it does not mean teacher and courses should be part of the same state module.
@@ -64,10 +114,10 @@ Hierarchical state also on folder level!
 
 E.g. when a different teacher is chosen, the course module can use that state.
 
--> Keep in mind state is hierarchical
+-> Takeaway 4: Use the scalable, hierarchical power of the Store
 
 
-## What's the scope of state?
+## Sharing state
 - /projects/1/customers (customer subset)
 - /customers (all customers)
 
@@ -76,12 +126,12 @@ Consider a separate ProjectCustomerStateModule
 Ask yourself: Do sibling/child modules need this state?
  If yes, create a separate state module.
 
--> Keep in mind what state is needed at which places in your app
+-> Takeaway 5: Think about state scope
 
 
 ## State ownership
 
-Store vs ComponentStore vs Service
+Store vs ComponentStore 
 - Store:
   - Centralized immutable state
   - Fits well for the hierarchy of your app, pages, routing
@@ -92,14 +142,16 @@ Store vs ComponentStore vs Service
   - Fits for components with complex state that need to be instantiated multiple times
   - Tooling lacking, less scalable but more flexible
 
-- Service
-  - Fits for short-lived, small-scoped state
+Explain ![](https://ngrx.io/generated/images/guide/component-store/state-structure.png)
+
+
   
 
 
 # Conclusion:
-- Domain model must be leading for decisions
-- Hierarchical state
-- State scope
-- State lifetime
-
+- -> Takeaway 1: The hierarchical module tree of your app should match the domain
+- -> Takeaway 2: Think about what state relations are needed in your app
+- -> Takeaway 3: When needed, share mutable state using a service
+- -> Takeaway 4: Use the scalable, hierarchical power of the NgRx Store
+- -> Takeaway 5: Think about state scope
+- -> Takeaway 6: Use the flexibility and isolation of the ComponentStore
