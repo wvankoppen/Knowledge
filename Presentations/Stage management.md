@@ -1,8 +1,8 @@
 State Management in Angular using NgRx.
 
-Talk is not a "Getting Started" or "Fundamentals" course about NgRx.
+This talk is not a "Getting Started" or "Fundamentals" course about NgRx.
 
-I like to give you my personal takeaways on improving your app architecture using NgRx.
+I like to give you my personal takeaways on improving the architecture of your app using NgRx.
 
 
 ## Outline
@@ -14,28 +14,29 @@ I like to give you my personal takeaways on improving your app architecture usin
 - State ownership
 
 ## NgRx: Do I need it?
-If you need a State Management solution, you know you need it.
+If you need a State Management framework, you know you need it.
 
 So: For a simple app (e.g. ToDo management), it's probably not needed.
 A service having a Subject holding the todo items probably suffices.
 
-So: NgRx is not intended to make simple things even more simple.
+So: Redux / NgRx is not intended to make simple things even more simple.
 It is intended to make difficult things less difficult.
 
-
 NgRx might be a good choice if you have a complex app for which:
-- the state needs to be accessed by many components, 
+- the state is big and needs to be accessed by many components, 
 - and is impacted by actions from different sources.
 
 
 
 ## App architecture matters
-A good start is to create feature modules per page
+A good start is to create a separate feature module per page.
+- Recommend also to do this per Organism (Atomic Design). 
 
-- Each container component in a separate module.
+
+### Sample domain model
+Teachers, Students, Courses
 
 
-Sample domain model
 - Teachers
   - Teacher
     - Courses
@@ -44,28 +45,47 @@ Create a feature module structure
 
 - TeachersModule
   - TeacherModule
-    - CoursesModule
+    - TeacherCoursesModule
+
+
+If the domain also contains:
+- Courses
+  - Course
+    - Teachers
+
+then you probably need
+
+- CoursesModule
+  - CourseModule
+    - CourseTeachersModule
+
 
 These modules could be lazy loaded using the router config.
 
+
 -> Takeaway 1: The hierarchical module tree of your app should match the domain
 
-## What (not) to store
 
-First, WHY do we store state in the first place?
+Ask: No surprises at this point, right?
+
+## WRedux principles:
 
 Principles:
-1. Single source of truth 
+1. Single source of truth (Store - explain later on what to store)
 2. State is read only
 3. Changes are made via pure functions (reducers)
 
 Advantages:
 - Centralized, immutable state (hydrate state via LocalStorage)
 - Performance (OnPush)
-- Testability (pure functions easy to test)
 - Tooling! (look whether state correct, no logging)
 - Component communication (inject Store)
 
+
+-> Takeaway 2: Take the Redux principles to heart
+
+
+## What (not) to store
 
 Think about 
 1. what state needs to be shared across your app.
@@ -74,7 +94,7 @@ Think about
 E.g.: Teacher list, Courses list 
 
 
--> Takeaway 2: Think about what state relations are needed in your app
+-> Takeaway 3: Think about what state relations are needed in your app
 
 What NOT to store:
 State that cannot respect the principles, e.g.:
@@ -83,9 +103,6 @@ Nuance: technically you can, by configuration, but you should not use it
 - or short-lived and small-scoped state
 
 Where do we store this state? Angular Service!
-   
-
--> Takeaway 3: When needed, share mutable state using a service
 
 
 ## Hierarchical modules, hierarchical state
@@ -151,7 +168,7 @@ Explain ![](https://ngrx.io/generated/images/guide/component-store/state-structu
 # Conclusion:
 - -> Takeaway 1: The hierarchical module tree of your app should match the domain
 - -> Takeaway 2: Think about what state relations are needed in your app
-- -> Takeaway 3: When needed, share mutable state using a service
+- -> Takeaway 3: Take the Redux principles to heart
 - -> Takeaway 4: Use the scalable, hierarchical power of the NgRx Store
 - -> Takeaway 5: Think about state scope
 - -> Takeaway 6: Use the flexibility and isolation of the ComponentStore
