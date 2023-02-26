@@ -68,7 +68,7 @@ These modules could be lazy loaded using the router config.
 
 Ask: No surprises at this point, right?
 
-## WRedux principles:
+## Redux principles:
 
 Principles:
 1. Single source of truth (Store - explain later on what to store)
@@ -106,16 +106,16 @@ Where do we store this state? Angular Service!
 
 
 ## Hierarchical modules, hierarchical state
-Identify state modules in your app.
-Each feature module can import state module for state that it needs.
+Think about state hierarchy and how this fits your domain model.
 
 Explain ![](https://ngrx.io/generated/images/guide/store/state-management-lifecycle.png)
-- Each state module can contain Selectors, Store, Reducer, Actions, Effects (and services) 
+Ask: Who knows this diagram? Please raise hand.
+- Each state module contains a Store and Reducer(s), and possibly Actions, Effects (and services) 
 - Not components, as they are in the View Component Modules 
 - The components can use the state as their module import the state module.
 
+If the specific teacher page shows all its courses, it does not automatically mean teacher and courses should be part of the same state module.
 Split up state modules when in doubt!
-If the specific teacher page shows all its courses, it does not mean teacher and courses should be part of the same state module.
 
 - TeachersStateModule
   - TeacherStateModule
@@ -127,16 +127,17 @@ AppStateModule: Implement Cross-cutting concerns here: Showing/Hiding Panels/Dia
 State modules can use parents and if imported siblings
 State modules cannot use their children (and you should not want to). If you want, use router to navigate!
 
-Hierarchical state also on folder level!
-
 E.g. when a different teacher is chosen, the course module can use that state.
 
--> Takeaway 4: Use the scalable, hierarchical power of the Store
+
+Hierarchical state also on folder level!
+
+-> Takeaway 4: Use the hierarchical, scalable power of the Store
 
 
 ## Sharing state
+- /customers (all customers) 
 - /projects/1/customers (customer subset)
-- /customers (all customers)
 
 It's possible to create a CustomerState module and reuse it, but note it also reuses the actual customer state!
 Consider a separate ProjectCustomerStateModule
@@ -147,20 +148,24 @@ Ask yourself: Do sibling/child modules need this state?
 
 
 ## State ownership
-
 Store vs ComponentStore 
 - Store:
+  - Module is owner
   - Centralized immutable state
   - Fits well for the hierarchy of your app, pages, routing
   - Tooling (DevTools)
 
 - Component Store
+  - Component is owner
   - Local immutable state
   - Fits for components with complex state that need to be instantiated multiple times
   - Tooling lacking, less scalable but more flexible
 
+
+
 Explain ![](https://ngrx.io/generated/images/guide/component-store/state-structure.png)
 
+- -> Takeaway 6: Use the flexibility and isolation of the NgRx ComponentStore
 
   
 
@@ -171,4 +176,4 @@ Explain ![](https://ngrx.io/generated/images/guide/component-store/state-structu
 - -> Takeaway 3: Take the Redux principles to heart
 - -> Takeaway 4: Use the scalable, hierarchical power of the NgRx Store
 - -> Takeaway 5: Think about state scope
-- -> Takeaway 6: Use the flexibility and isolation of the ComponentStore
+- -> Takeaway 6: Use the flexibility and isolation of the NgRx ComponentStore
