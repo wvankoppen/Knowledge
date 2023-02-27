@@ -2,40 +2,74 @@ State Management in Angular using NgRx.
 
 This talk is not a "Getting Started" or "Fundamentals" course about NgRx.
 
-I like to give you my personal takeaways on improving the architecture of your app using NgRx.
+DO you ever have questions like: 
+- How do I set up a sound architecture of my app using NgRx?
+- I'm working on a NgRx project but not sure how to improve the architecture.
+
+I like to give you my personal takeaways on this.
 
 
 ## Outline
-- NgRx: Do I need it?
-- App architecture matters
-- What (not) to store
+- Do I need NgRx?
+- Redux principles
+- App architecture: Driven by domain
 - Hierarchical modules, hierarchical state
+- What (not) to store
 - Sharing state
 - State ownership
 
-## NgRx: Do I need it?
-If you need a State Management framework, you know you need it.
+
+
+## Do I need NgRx?
+Simple: If you do need a State Management framework, you know you need it.
 
 So: For a simple app (e.g. ToDo management), it's probably not needed.
 A service having a Subject holding the todo items probably suffices.
 
-So: Redux / NgRx is not intended to make simple things even more simple.
+Note: Redux / NgRx is not intended to make simple things even more simple.
 It is intended to make difficult things less difficult.
 
-NgRx might be a good choice if you have a complex app for which:
-- the state is big and needs to be accessed by many components, 
+NgRx might be a good choice if you have a large, complex app for which the state:
+- is big and needs to be accessed by many components
 - and is impacted by actions from different sources.
 
 
 
-## App architecture matters
-A good start is to create a separate feature module per page.
-- Recommend also to do this per Organism (Atomic Design). 
+## Redux principles
+
+Principles:
+1. Single source of truth (Store - explain later on what to store)
+2. State is read only
+3. Changes are made via pure functions (reducers)
+
+Advantages:
+- Centralized, immutable state (hydrate state via LocalStorage)
+- Performance (OnPush)
+- Tooling! (look whether state correct, no logging)
+- Component communication (inject Store)
+
+
+
+
+Principles are important, as not respecting them will not result in the advantages.
+E.g. storing a non-serializable tree structure.
+
+-> Takeaway 1: The Redux principles 
+
+
+## App architecture: Driven by domain
+The more your app architecture is sound, the more advantages you can leverage of NgRx.
+
+It's recommended to have separate feature module per page.
+- Recommended even further: Feature module per Organism (Atomic Design).
 
 
 ### Sample domain model
 Teachers, Students, Courses
 
+
+
+### Sample app wireframe
 
 - Teachers
   - Teacher
@@ -60,49 +94,20 @@ then you probably need
     - CourseTeachersModule
 
 
-These modules could be lazy loaded using the router config.
+These modules could be lazy loaded using the router config. This will also apply for feature state modules as we'll see later.
 
 
--> Takeaway 1: The hierarchical module tree of your app should match the domain
+So if you have a TeachersModule and CoursesModule, in which all components are placed, it will be difficult to leverage NgRx.
+
+
+-> Takeaway 2: The module tree of your app should match the domain
 
 
 Ask: No surprises at this point, right?
 
-## Redux principles:
-
-Principles:
-1. Single source of truth (Store - explain later on what to store)
-2. State is read only
-3. Changes are made via pure functions (reducers)
-
-Advantages:
-- Centralized, immutable state (hydrate state via LocalStorage)
-- Performance (OnPush)
-- Tooling! (look whether state correct, no logging)
-- Component communication (inject Store)
 
 
--> Takeaway 2: Take the Redux principles to heart
 
-
-## What (not) to store
-
-Think about 
-1. what state needs to be shared across your app.
-2. whether it respects the Redux principles 
-
-E.g.: Teacher list, Courses list 
-
-
--> Takeaway 3: Think about what state relations are needed in your app
-
-What NOT to store:
-State that cannot respect the principles, e.g.:
-- mutual state (Leaflet instance)
-Nuance: technically you can, by configuration, but you should not use it
-- or short-lived and small-scoped state
-
-Where do we store this state? Angular Service!
 
 
 ## Hierarchical modules, hierarchical state
@@ -135,6 +140,28 @@ Hierarchical state also on folder level!
 -> Takeaway 4: Use the hierarchical, scalable power of the Store
 
 
+
+## What (not) to store
+
+Think about
+1. what state needs to be shared across your app.
+2. whether the state respects the Redux principles
+
+E.g.: Teacher list, Courses list
+
+
+-> Takeaway 3: Think about what state relations are needed in your app
+
+What NOT to store:
+State that cannot respect the principles, e.g.:
+- mutual state (Leaflet instance)
+  Nuance: technically you can, by configuration, but you should not use it
+- or short-lived and small-scoped state
+
+Where do we store this state? Angular Service!
+
+
+
 ## Sharing state
 - /customers (all customers) 
 - /projects/1/customers (customer subset)
@@ -148,6 +175,8 @@ Ask yourself: Do sibling/child modules need this state?
 
 
 ## State ownership
+Up until now, the feature module was the owner of the state.
+
 Store vs ComponentStore 
 - Store:
   - Module is owner
