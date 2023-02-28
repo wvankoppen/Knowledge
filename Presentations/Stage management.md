@@ -2,25 +2,75 @@ State Management in Angular using NgRx.
 
 This talk is not a "Getting Started" or "Fundamentals" course about NgRx.
 
-DO you ever have questions like: 
+Did you ever have questions like: 
 - How do I set up a sound architecture of my app using NgRx?
-- I'm working on a NgRx project but not sure how to improve the architecture.
+- I'm working on an app that uses NgRx, but I'm not sure how to improve its architecture.
 
 I like to give you my personal takeaways on this.
 
 
 ## Outline
-- Do I need NgRx?
-- Redux principles
-- App architecture: Driven by domain
-- Hierarchical modules, hierarchical state
-- What (not) to store
-- Sharing state
-- State ownership
+- State 
+  - Types of state (immutable & serializable state, the rest)
+  - Scope (where is which part of state needed)
+  - Ownership & lifespan (what it is, what it means for architecture)
+
+- NgRx
+  - Redux principles
+  - NgRx Store
+  - NgRx ComponentStore
+
+- Sketch app, think in components
+- Create a hierarchical module tree
+- Design state modules that use Store. Use the hierarchy
+- If your state is mutable, check whether you can make it immutable. If it cannot, eg leaflet, thats fine.
+  - Use scope to draw boundaries between state modules
+  - Stick with state with long lifespan for now in which module is owner
+  - For state that the component needs to be the owner, consider componentstore or a service 
+
+
+# State
+State is the runtime representation of our application.
+How does it affect architecture?
+
+## Types of state
+Let's make a separation between these 2 types:
+
+- Serializable & Immutable state:
+  String
+  Number
+  Boolean
+  Array
+  Object
+  undefined or null
+
+- the rest: Date, Map, Set,
+  Function
+  Observable or Promise
+  ArrayBuffer or Blob
+  HTMLElement
+  window and similar
+
+## State scope
+(where is which part of state needed)
+State can be
+- app-global (online / offline, current dialog, current panel)
+- big part of the app (Open a project, this current project info is needed at many places), 
+- For a (container) component (PrivaFilter?)
+
+## State ownership & lifespan
+- App / (Feature) Module 
+- Component / Service
+
+(if 2 components use the state, do I expect them to be the same )
+
+## State size
 
 
 
-## Do I need NgRx?
+## NgRx?
+NgRx is a framework for using the Redux implementation in Angular.
+
 Simple: If you do need a State Management framework, you know you need it.
 
 So: For a simple app (e.g. ToDo management), it's probably not needed.
@@ -31,7 +81,7 @@ It is intended to make difficult things less difficult.
 
 NgRx might be a good choice if you have a large, complex app for which the state:
 - is big and needs to be accessed by many components
-- and is impacted by actions from different sources.
+- is impacted by actions from different sources.
 
 
 
@@ -54,7 +104,6 @@ Advantages:
 Principles are important, as not respecting them will not result in the advantages.
 E.g. storing a non-serializable tree structure.
 
--> Takeaway 1: The Redux principles 
 
 
 ## App architecture: Driven by domain
