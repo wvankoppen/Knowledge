@@ -20,13 +20,15 @@ I like to give you my personal takeaways on this.
   - NgRx Store
   - NgRx ComponentStore
 
-- Sketch app, think in components
-- Create a hierarchical module tree
-- Design state modules that use Store. Use the hierarchy
-- If your state is mutable, check whether you can make it immutable. If it cannot, eg leaflet, thats fine.
-  - Use scope to draw boundaries between state modules
-  - Stick with state with long lifespan for now in which module is owner
-  - For state that the component needs to be the owner, consider componentstore or a service 
+- Steps for improving architecture:
+  - Design app hierarchy (with module tree and routing)
+  - Which state is needed where? (think about ownership)
+  - Module-owned state:
+    - Use state scope to identify state modules
+    - If your state is mutable, check whether you can make it immutable (for Store). If it cannot, eg leaflet, that's fine.
+      - For immutable state, use a Service.
+    - If you need cyclic data, create it in a selector or pipe
+  - For owner = component, consider ComponentStore or a service 
 
 
 # State
@@ -44,7 +46,8 @@ Let's make a separation between these 2 types:
   Object
   undefined or null
 
-- the rest: Date, Map, Set,
+- the rest: 
+  Date, Map, Set,
   Function
   Observable or Promise
   ArrayBuffer or Blob
@@ -62,7 +65,9 @@ State can be
 - App / (Feature) Module 
 - Component / Service
 
-(if 2 components use the state, do I expect them to be the same )
+(if 2 components use the state, do I expect them to be the same? )
+
+
 
 ## State size
 
@@ -106,6 +111,77 @@ E.g. storing a non-serializable tree structure.
 
 
 
+
+## NgRx Store
+E.g.: Teacher list, Courses list
+
+
+What NOT to store:
+State that cannot respect the principles, e.g.:
+- mutual state (Leaflet instance)
+  Nuance: technically you can, by configuration, but you should not use it
+- or short-lived and small-scoped state
+
+
+
+Think about state hierarchy and how this fits your domain model.
+
+Explain ![](https://ngrx.io/generated/images/guide/store/state-management-lifecycle.png)
+Ask: Who knows this diagram? Please raise hand.
+- Each state module contains a Store and Reducer(s), and possibly Actions, Effects (and services)
+- Not components, as they are in the View Component Modules
+- The components can use the state as their module import the state module.
+
+If the specific teacher page shows all its courses, it does not automatically mean teacher and courses should be part of the same state module.
+Split up state modules when in doubt!
+
+- TeachersStateModule
+  - TeacherStateModule
+  - CoursesStateModule
+
+
+AppStateModule: Implement Cross-cutting concerns here: Showing/Hiding Panels/Dialogs, Online/Offline behavior,
+
+State modules can use parents and if imported siblings
+State modules cannot use their children (and you should not want to). If you want, use router to navigate!
+
+E.g. when a different teacher is chosen, the course module can use that state.
+
+
+Hierarchical state also on folder level!
+
+-> Takeaway 4: Use the hierarchical, scalable power of the Store
+
+
+## Component store
+Up until now, the feature module was the owner of the state.
+
+Store vs ComponentStore
+- Store:
+  - Module is owner
+  - Centralized immutable state
+  - Fits well for the hierarchy of your app, pages, routing
+  - Tooling (DevTools)
+
+- Component Store
+  - Component is owner
+  - Local immutable state
+  - Fits for components with complex state that need to be instantiated multiple times
+  - Tooling lacking, less scalable but more flexible
+
+
+
+Explain ![](https://ngrx.io/generated/images/guide/component-store/state-structure.png)
+
+- -> Takeaway 6: Use the flexibility and isolation of the NgRx ComponentStore
+
+
+
+
+## Design hierarchy
+
+
+
 ## App architecture: Driven by domain
 The more your app architecture is sound, the more advantages you can leverage of NgRx.
 
@@ -118,7 +194,7 @@ Teachers, Students, Courses
 
 
 
-### Sample app wireframe
+### Sample app hierarchy
 
 - Teachers
   - Teacher
@@ -149,7 +225,6 @@ These modules could be lazy loaded using the router config. This will also apply
 So if you have a TeachersModule and CoursesModule, in which all components are placed, it will be difficult to leverage NgRx.
 
 
--> Takeaway 2: The module tree of your app should match the domain
 
 
 Ask: No surprises at this point, right?
@@ -159,59 +234,10 @@ Ask: No surprises at this point, right?
 
 
 
-## Hierarchical modules, hierarchical state
-Think about state hierarchy and how this fits your domain model.
-
-Explain ![](https://ngrx.io/generated/images/guide/store/state-management-lifecycle.png)
-Ask: Who knows this diagram? Please raise hand.
-- Each state module contains a Store and Reducer(s), and possibly Actions, Effects (and services) 
-- Not components, as they are in the View Component Modules 
-- The components can use the state as their module import the state module.
-
-If the specific teacher page shows all its courses, it does not automatically mean teacher and courses should be part of the same state module.
-Split up state modules when in doubt!
-
-- TeachersStateModule
-  - TeacherStateModule
-  - CoursesStateModule
-
-
-AppStateModule: Implement Cross-cutting concerns here: Showing/Hiding Panels/Dialogs, Online/Offline behavior,
-
-State modules can use parents and if imported siblings
-State modules cannot use their children (and you should not want to). If you want, use router to navigate!
-
-E.g. when a different teacher is chosen, the course module can use that state.
-
-
-Hierarchical state also on folder level!
-
--> Takeaway 4: Use the hierarchical, scalable power of the Store
 
 
 
-## What (not) to store
-
-Think about
-1. what state needs to be shared across your app.
-2. whether the state respects the Redux principles
-
-E.g.: Teacher list, Courses list
-
-
--> Takeaway 3: Think about what state relations are needed in your app
-
-What NOT to store:
-State that cannot respect the principles, e.g.:
-- mutual state (Leaflet instance)
-  Nuance: technically you can, by configuration, but you should not use it
-- or short-lived and small-scoped state
-
-Where do we store this state? Angular Service!
-
-
-
-## Sharing state
+## State ownership
 - /customers (all customers) 
 - /projects/1/customers (customer subset)
 
@@ -220,38 +246,22 @@ Consider a separate ProjectCustomerStateModule
 Ask yourself: Do sibling/child modules need this state?
  If yes, create a separate state module.
 
--> Takeaway 5: Think about state scope
 
 
-## State ownership
-Up until now, the feature module was the owner of the state.
-
-Store vs ComponentStore 
-- Store:
-  - Module is owner
-  - Centralized immutable state
-  - Fits well for the hierarchy of your app, pages, routing
-  - Tooling (DevTools)
-
-- Component Store
-  - Component is owner
-  - Local immutable state
-  - Fits for components with complex state that need to be instantiated multiple times
-  - Tooling lacking, less scalable but more flexible
-
-
-
-Explain ![](https://ngrx.io/generated/images/guide/component-store/state-structure.png)
-
-- -> Takeaway 6: Use the flexibility and isolation of the NgRx ComponentStore
 
   
 
 
 # Conclusion:
-- -> Takeaway 1: The hierarchical module tree of your app should match the domain
-- -> Takeaway 2: Think about what state relations are needed in your app
-- -> Takeaway 3: Take the Redux principles to heart
-- -> Takeaway 4: Use the scalable, hierarchical power of the NgRx Store
-- -> Takeaway 5: Think about state scope
-- -> Takeaway 6: Use the flexibility and isolation of the NgRx ComponentStore
+State
+- Immutable and serializable state
+- Scope, Ownership & Lifespan 
+
+- Redux principles
+
+- Steps for improving architecture:
+  - Design app hierarchy 
+  - Which state is needed where? 
+  - Mutable state in service
+  - Module-owned state: Store 
+  - Component-owned state: ComponentStore 
