@@ -10,72 +10,29 @@ I like to give you my personal takeaways on this.
 
 
 ## Outline
-- State 
+- Intro: What is NgRx? (1 min) 
+- State (6 min)
   - What is state? 
-  - Immutability & serializability 
-  - Scope (where is which part of state needed, e.g. current project context)
-  - Ownership & lifespan (what it is, what it means for architecture)
+  - State metrics
+    - Immutability & serializability 
+    - Ownership 
+    - Scope (where is which part of state needed, e.g. current project context)
+    - Lifespan (what it is, what it means for architecture)
+  - Redux
 
-- NgRx
-  - What is NgRx?
-  - Redux principles
+- NgRx (5 min)
   - NgRx Store
   - NgRx ComponentStore
 
-- My takeaways for improving architecture:
-  - Design app hierarchy driven by domain (with module tree and routing)
-  - Which state is needed where in your app? (think about ownership)
-  - Module-owned state:
-    - Use state ownership and scope to group state inside modules 
-    - If your state is mutable, check whether you can make it immutable (for Store). If it cannot, eg leaflet, that's fine.
-      - For immutable state, use a Service.
-    - If you need cyclic data, create it in a selector or pipe
-  - For owner = component, consider ComponentStore or a service 
-
-
-# State
-## What is state?
-State is the runtime representation of our application.
-It can be any value: 
-
-String, Number, Boolean, Array, Object, undefined or null, Date, Map, Set, Function, Observable or Promise, ArrayBuffer, Blob, HTMLElement, window and similar
-
-
-## Immutability & serializability
-Let's make a separation between these 2 types:
-
-- Serializable & immutable state:
-  String, Number, Boolean, Array, Object, undefined or null
-
-- the rest: 
-  Date, Map, Set, Function, Observable, Promise, ArrayBuffer, Blob, HTMLElement, window
-
-## State scope
-(where is which part of state needed)
-State can be
-- app-wide (online / offline, current dialog, current panel)
-- specific feature of the app (Open a project, this current project context is needed at many places), 
-- only needed inside a specific (Container)Component
-
-
-## State ownership & lifespan
-(who creates and destroys the state)
-- An eagerly-loaded Feature Module 
-- A lazy-loaded Feature Module 
-- A Component (PrivaFilter, state is not needed outside this component, and 2 filters is 2 states)
-(if 2 components use the state, do I expect them to be the same? )
-(if I destroy and create the component, must the state still be there? )
-
-
-
-## State complexity
-
-
-## NgRx
-NgRx is a framework for using the Redux implementation in Angular.
-
-Note: Redux / NgRx is not intended to make simple things even more simple.
-It is intended to make difficult things less difficult.
+- My takeaways for improving architecture: (10 min)
+  - Design an app hierarchy driven by domain (with module tree and routing)
+  - Think about State immutability & serializability 
+  - Think about state ownership and lifespan: Module or component?
+  - Think about state scope
+  
+# NgRx
+- a framework for building reactive applications in Angular (and manage state)
+- not intended to make simple things even more simple. It is intended to make difficult things less difficult.
 
 Do I need it?
 
@@ -85,6 +42,55 @@ So: For a simple app (e.g. ToDo management), it's probably not needed.
 A service having a Subject holding the todo items probably suffices.
 
 For a complex app though, it can be a decent choice.
+
+
+
+# State
+- What is state? -> A representation of what happened so far in our application
+
+String
+Number
+Bigint 
+Boolean
+Undefined
+Null
+Symbol
+Object -> Promise, Map, Set, ArrayBuffer, Blob, HTMLElement, etc
+
+
+## State Immutability & serializability
+- The first 7 can are serializable & immutable
+- object can be both also, but only if you don't mutate it yourself
+- third party types that are stored as 
+- data in pure form (without logic) is usually both, use Object.freeze to be sure
+- both are important,
+  - immutability to be sure for state to track changes 
+  - serializability for state persistence / rehydration from storage
+
+## State scope
+(In how many places in your can a piece of state be used)
+State can be
+- global / app wide (online / offline, current dialog, current panel)
+- specific feature of the app (Open a project, this current project context is needed at many places), 
+- local / only needed inside a specific (Container)Component
+
+## State lifespan
+(When state created and destroyed)
+- When app is starts
+- When module is loaded
+- When component is instantiated
+  (if I destroy and re-create a certain component that needs state, must the state still be there? )
+
+## State ownership 
+(Who creates and destroys a piece of state)
+- An Angular (feature) Module 
+- An Angular Component (PrivaFilter, state is not needed outside this component, and 2 filters is 2 states)
+(can there be more components?)
+(if 2 of the same components are instantiated, do I expect them to be of the same state? )
+
+Short recap of these state metrics: Immutability, serializability, scope, lifespan, ownership
+
+
 
 
 ## Redux principles
@@ -134,6 +140,18 @@ Centralized immutable state
 - Ownership & lifespan: Module-owned, long-lived state
 
 
+
+
+
+What NOT to store:
+State that cannot respect the principles, e.g.:
+- mutual state (Leaflet instance)
+  Nuance: technically you can, by configuration, but you should not use it
+
+
+
+
+
 ## NgRx Component store
 
 - Immutability & serializability: Uses the Redux principles
@@ -144,15 +162,18 @@ Centralized immutable state
   - Tooling lacking, less scalable but more flexible
 
 
-
-
-## Store vs ComponentStore
-
 Explain ![](https://ngrx.io/generated/images/guide/component-store/state-structure.png)
 
 
 
+Short recap: Store vs ComponentStore
 
+
+
+
+
+
+# Takeaways
 
 ## Design app hierarchy driven by domain
 The more your app architecture is sound, the more advantages you can leverage of NgRx.
@@ -164,31 +185,35 @@ It's recommended to have separate feature module per page.
 ### Sample domain model
 Teachers, Students, Courses
 
+List of teachers, list of students
+
 
 
 ### Sample app hierarchy
 
-- Teachers
-  - Teacher
-    - Courses
+- Teachers      (/teachers)
+  - Teacher     (/teachers/1)
+    - Students  (/teachers/1/students)
 
 Create a feature module structure
 
-- TeachersModule
-  - TeacherModule
-    - TeacherCoursesModule
+- AppModule  
+  - TeachersModule
+    - TeacherModule
+      - TeacherStudentsModule
 
 
 If the domain also contains:
-- Courses
-  - Course
+- Students
+  - Student
     - Teachers
 
 then you probably need
 
-- CoursesModule
-  - CourseModule
-    - CourseTeachersModule
+- AppModule
+  - StudentsModule
+    - StudentModule
+      - StudentTeachersModule
 
 
 These modules could be lazy loaded using the router config. This will also apply for feature state modules as we'll see later.
@@ -196,70 +221,72 @@ These modules could be lazy loaded using the router config. This will also apply
 
 So if you have a TeachersModule and CoursesModule, in which all components are placed, it will be difficult to leverage NgRx.
 
-
-
-
-Ask: No surprises at this point, right?
+Outcome: A hierarchical, modular separation of your view components
 
 
 
 
 
-## Which state is needed where
 
-State for Students, Courses
+## Think about state ownership and lifespan: Module or component?
+- For component-owned state, consider NgRx ComponentStore (or an Angular service, declare in ElementInjector)
+- For module-owned state, separate in state modules (imp!) for the app hierarchy (or use standalone API )
+- Separation enables Lazy loading:
 
-- /courses (all courses) 
-- /students (all students)
-- /students/1 (current student)
-- /students/1/courses (course subset)
-
-It's possible to create a CoursesState module and reuse it for student courses, but note it also reuses the actual course state!
-Consider a separate StudentCoursesStateModule
-Ask yourself: Do sibling/child modules need this state?
- If yes, create a separate state module.
+  - TeachersStateModule
+    - TeacherStateModule
 
 
-Cross-cutting concerns: Showing/hiding panels/dialogs/isOnline state
+## Think about state scope
 
-
-
-What NOT to store:
-State that cannot respect the principles, e.g.:
-- mutual state (Leaflet instance)
-  Nuance: technically you can, by configuration, but you should not use it
-- or short-lived and small-scoped state
-
-
-## Module-owned state:
-Use state scope to identify state modules
-- If your state is mutable, check whether you can make it immutable (for Store). If it cannot, eg leaflet, that's fine.
-- For immutable state, use a Service.
-- If you need cyclic data, create it in a selector or pipe
-
-
-If the specific teacher page shows all its courses, it does not automatically mean teacher and courses should be part of the same state module.
-Split up state modules when in doubt!
-
-- TeachersStateModule
-  - TeacherStateModule
-  - CoursesStateModule
-
-
-AppStateModule: Implement Cross-cutting concerns here: Showing/Hiding Panels/Dialogs, Online/Offline behavior,
 
 State modules can use parents and if imported siblings
 State modules cannot use their children (and you should not want to). If you want, use router to navigate!
 
-E.g. when a different teacher is chosen, the course module can use that state.
+E.g. when a different teacher is chosen, the students module can use that state.
 
 
-Hierarchical state also on folder level!
+E.g. AppStateModule has app-wide scope: Implement Cross-cutting concerns here: Showing/Hiding Panels/Dialogs, Online/Offline behavior,
+
+  - Don't mix long and small scoped state in a single state module (remember app hierarchy)
+  - Use the app domain hierarchy to group slices of state in state modules
 
 
-## Component-owned state
-consider ComponentStore or a service
-  
+
+If the specific teacher page shows all his students (where students is not a separate page), it does not automatically mean teacher and student should be part of the same state module.
+Split up state modules when in doubt!
+
+- TeachersStateModule
+  - TeacherStateModule
+  - StudentsStateModule
+
+Why? Because tomorrow it might be a separate page, and then you need to split anyway.
+
+
+If we also would have extra:
+
+- Students      (/students)
+
+Could we reuse the StudentsStateModule module students list?
+-> That would interfere with the TeacherStudentList 
+Could we reuse the StudentsStateModule module with a separate list?
+-> Technically yes, but note the scope of the existing module is smaller (lazy loading!).
+It's better to separate (rename existing module to TeacherStudentsStateModule!
+
+
+Outcome: Hierarchical state also on folder level!
+
+
+
+
+
+
+## Think about State immutability & serializability
+- If pieces of state are mutable, check whether you can make it immutable. If it cannot, eg leaflet, use a Service
+- If pieces of state are unserializable, check whether you can make it serializable (store raw, remove cycles)
+  If you need cyclic data, consider to transform this in a selector or pipe
+
+
 
 
 # Conclusion:
