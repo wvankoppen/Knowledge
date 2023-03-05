@@ -10,32 +10,33 @@ I like to give you my personal takeaways on this.
 
 
 ## Outline
-- Intro: What is NgRx? (1 min) 
-- State (6 min)
-  - What is state? 
-  - State metrics
-    - Immutability & serializability 
-    - Ownership 
-    - Scope (where is which part of state needed, e.g. current project context)
-    - Lifespan (what it is, what it means for architecture)
-  - Redux
+- Intro: What is NgRx? (1 min)  
+- State metrics (6 min)  
+  ( In order to leverage the power of NgRx, it's important to have a solid understanding about the state needed in your app
+the following metrics help with that
+)
+
+  - Immutability & serializability 
+  - Ownership 
+  - Scope (where is which part of state needed, e.g. global, local or somewhere in between)
+  - Lifespan (what it is, what it means for architecture)
 
 - NgRx (5 min)
+  (I will show the Store and ComponentStore)
   - NgRx Store
   - NgRx ComponentStore
 
+(
+There are no straightforward answers as every app is different.  Though I can help you make the right choice using my takeaways)
+
 - My takeaways for improving architecture: (10 min)
-  - Design an app hierarchy driven by domain (with module tree and routing)
-  - Think about State immutability & serializability 
-  - Think about state ownership and lifespan: Module or component?
-  - Think about state scope
+  
   
 # NgRx
-- a framework for building reactive applications in Angular (and manage state)
+- a framework for building reactive applications in Angular 
 - not intended to make simple things even more simple. It is intended to make difficult things less difficult.
 
 Do I need it?
-
 Simple answer: If you do need a State Management framework, you know you need it.
 
 So: For a simple app (e.g. ToDo management), it's probably not needed.
@@ -43,10 +44,10 @@ A service having a Subject holding the todo items probably suffices.
 
 For a complex app though, it can be a decent choice.
 
+In order to make a sound choice for architecting your state, hereby the metrics that you need to think about.
 
-
-# State
-- What is state? -> A representation of what happened so far in our application
+## State Immutability & serializability
+What is state? -> A representation of what happened so far in our application
 
 String
 Number
@@ -58,7 +59,6 @@ Symbol
 Object -> Promise, Map, Set, ArrayBuffer, Blob, HTMLElement, etc
 
 
-## State Immutability & serializability
 - The first 7 can are serializable & immutable
 - object can be both also, but only if you don't mutate it yourself
 - third party types that are stored as 
@@ -93,9 +93,16 @@ Short recap of these state metrics: Immutability, serializability, scope, lifesp
 
 
 
-## Redux principles
 
-1. Single source of truth (Store - will come back to this later)
+
+## NgRx Store
+
+Ask: Who knows this diagram? Please raise hand.
+
+Explain ![](https://ngrx.io/generated/images/guide/store/state-management-lifecycle.png)
+
+
+1. Single source of truth (Store)
 2. State is read only
 3. Changes are made via pure functions (reducers)
 
@@ -109,19 +116,12 @@ Advantages:
 
 
 Principles are important, as not respecting them will not result in the advantages.
-E.g. 
-- storing a non-serializable tree structure. 
+E.g.
+- storing a non-serializable tree structure.
   - Then the content cannot be persisted e.g. in LocalStorage.
 - storing a mutable object
   - Violates the principles
 
-
-
-## NgRx Store
-
-Ask: Who knows this diagram? Please raise hand.
-
-Explain ![](https://ngrx.io/generated/images/guide/store/state-management-lifecycle.png)
 
 
 - Each state module contains 
@@ -294,11 +294,11 @@ State
 - Immutable and serializable state
 - Scope, Ownership & Lifespan 
 
-- Redux principles
+NgRx
+- Store and ComponentStore
 
 - Steps for improving architecture:
-  - Design app hierarchy 
-  - Which state is needed where? 
-  - Try to avoid mutable state, if not possible put it in service
-  - Module-owned state: Store 
-  - Component-owned state: ComponentStore 
+  - Design an app hierarchy driven by domain (with module tree and routing)
+  - Think about state ownership and lifespan: Module or component?
+  - Think about state scope
+  - Think about State immutability & serializability
