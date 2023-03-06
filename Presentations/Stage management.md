@@ -107,6 +107,8 @@ Ask: Who knows this diagram? Please raise hand.
 Explain ![](https://ngrx.io/generated/images/guide/store/state-management-lifecycle.png)
 
 
+TODO: Global state
+
 1. Single source of truth (Store)
 2. State is read only
 3. Changes are made via pure functions (reducers)
