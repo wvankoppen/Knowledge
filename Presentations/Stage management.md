@@ -8,6 +8,14 @@ Did you ever have questions like:
 
 I like to give you my personal takeaways on this.
 
+## About me
+•Wouter van Koppen
+•36 years old
+•Live in Delft
+•Like backpacking, photography, cooking
+•Electrical Engineering & Computer Science
+•Started at Priva in 2013
+Interested in JavaScript, Angular, Reactive programming, State Management
 
 ## Outline
 - Intro: What is NgRx? (1 min)  
@@ -34,12 +42,9 @@ There are no straightforward answers as every app is different.  Though I can he
   
 # NgRx
 - a framework for building reactive applications in Angular 
-- not intended to make simple things even more simple. It is intended to make difficult things less difficult.
-
-Do I need it?
-Simple answer: If you do need a State Management framework, you know you need it.
-
-So: For a simple app (e.g. ToDo management), it's probably not needed.
+- Manage global and local state in a scalable way
+  - not intended to make simple things even more simple. It is intended to make difficult things less difficult.
+  - For a simple app (e.g. ToDo management), it's probably not needed.
 A service having a Subject holding the todo items probably suffices.
 
 For a complex app though, it can be a decent choice.
@@ -114,16 +119,6 @@ Advantages:
 
 
 
-
-Principles are important, as not respecting them will not result in the advantages.
-E.g.
-- storing a non-serializable tree structure.
-  - Then the content cannot be persisted e.g. in LocalStorage.
-- storing a mutable object
-  - Violates the principles
-
-
-
 - Each state module contains 
   - a Store and Reducer(s)
   - possibly Actions, Effects (and services)
@@ -138,9 +133,6 @@ Centralized immutable state
 - Immutability & serializability:  The store implements the Redux principles
 - Scope: Wide or small scope
 - Ownership & lifespan: Module-owned, long-lived state
-
-
-
 
 
 What NOT to store:
@@ -183,7 +175,7 @@ It's recommended to have separate feature module per page.
 
 
 ### Sample domain model
-Teachers, Students, Courses
+Teachers, Students
 
 List of teachers, list of students
 
@@ -219,7 +211,7 @@ then you probably need
 These modules could be lazy loaded using the router config. This will also apply for feature state modules as we'll see later.
 
 
-So if you have a TeachersModule and CoursesModule, in which all components are placed, it will be difficult to leverage NgRx.
+So if you have a TeachersModule and StudentsModule, in which all components are placed, it will be difficult to leverage NgRx.
 
 Outcome: A hierarchical, modular separation of your view components
 
@@ -291,11 +283,8 @@ Outcome: Hierarchical state also on folder level!
 
 # Conclusion:
 State
-- Immutable and serializable state
-- Scope, Ownership & Lifespan 
-
-NgRx
-- Store and ComponentStore
+  - Immutability, Serializability, Scope, Ownership & Lifespan
+NgRx Store and ComponentStore
 
 - Steps for improving architecture:
   - Design an app hierarchy driven by domain (with module tree and routing)
