@@ -10,7 +10,10 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
     },
     devServer: {
-        writeToDisk: true
+        devMiddleware: {
+            writeToDisk: true,
+        },
+        static: './'
     },
     devtool: 'source-map'
 };

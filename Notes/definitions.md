@@ -16,7 +16,6 @@ Thunk
 Hollywood Principle
 : Don’t call us, we'll call you. (template method)
 
-
 DRY
 : Don't repeat yourself
 

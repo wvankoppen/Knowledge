@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b85acb0b-9ae8-4e0e-beb2-1e654f11914d" name="Changes" comment="webpack">
+      <change afterPath="$PROJECT_DIR$/blogs/hierarchical-state.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/async-await.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playground/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playground/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blogs/app-architecture.md" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/app-architecture.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/Basic/default type values.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/Basic/default type values.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/Basic/equality struct.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/Basic/equality struct.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/Basic/equality.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/Basic/equality.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/Basic/overflow.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/Basic/overflow.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/GoF/abstract factory problem.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/GoF/abstract factory problem.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/GoF/adapter.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/GoF/adapter.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/GoF/bridge.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/GoF/bridge.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/GoF/builder with state.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/GoF/builder with state.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/GoF/command.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/GoF/command.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/GoF/state pattern.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/GoF/state pattern.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/LINQ/linq aggregate performance.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/LINQ/linq aggregate performance.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/LINQ/linq performance.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/LINQ/linq performance.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/LINQ/linq query vs expression syntax.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/LINQ/linq query vs expression syntax.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/LINQ/linq why no foreach on ienumerable.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/LINQ/linq why no foreach on ienumerable.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/LINQ/observer.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/LINQ/observer.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/async-await-simple.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/async-await-simple.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/async-await-timeawaiter.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/async-await-timeawaiter.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/async-await.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/async-await.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/closure-functions.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/closure-functions.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/closure-variable.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/closure-variable.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/closure.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/closure.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/constructor base derrived sequence.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/constructor base derrived sequence.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/covariance-contravariance.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/covariance-contravariance.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/delegates.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/delegates.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/dictionary key.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/dictionary key.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/domain-infrastructure-sep-bad.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/domain-infrastructure-sep-bad.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/domain-infrastructure-sep-good.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/domain-infrastructure-sep-good.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/domainmodel-correct.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/domainmodel-correct.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/domainmodel-incorrect.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/domainmodel-incorrect.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/dynamic.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/dynamic.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/events.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/events.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/expressiontree.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/expressiontree.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/infinitive-sequences.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/infinitive-sequences.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/iqueryable.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/iqueryable.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/lazy.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/lazy.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/maybe.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/maybe.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/override-new.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/override-new.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/patterns.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/patterns.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/switch-better.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/switch-better.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/threadpool window over queue.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/threadpool window over queue.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/visitor multiple dispatch.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/visitor multiple dispatch.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/visitor single dispatch.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/visitor single dispatch.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C#/yield difference with list.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/yield difference with list.linq" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/playground/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/playground/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/playground/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/playground/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/src/async-await.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/src/framework/bootstrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/framework/bootstrapper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/src/generator.js" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/generator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/src/iterable-enumerable.js" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/iterable-enumerable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/src/lib/proxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/lib/proxy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/src/object.js" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/object.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/src/performance.js" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/performance.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/src/prototype.js" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/prototype.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/src/reduce.js" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/reduce.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/src/rxjs.connect.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/rxjs.connect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/src/rxjs.error.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/rxjs.error.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/src/rxjs.hot-timer.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/rxjs.hot-timer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/src/rxjs.producer.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/rxjs.producer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/src/rxjs.sequencer.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/rxjs.sequencer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/src/rxjs.subjects.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/rxjs.subjects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/src/rxjs.unsubscribe.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/rxjs.unsubscribe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/src/scoping.js" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/scoping.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/src/webcomponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/webcomponent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/playground/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notes/css.md" beforeDir="false" afterPath="$PROJECT_DIR$/Notes/css.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notes/definitions.md" beforeDir="false" afterPath="$PROJECT_DIR$/Notes/definitions.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Powershell/filesearch.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Powershell/foreach-differences.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Powershell/foreach-or-select.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Powershell/start-wait.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Powershell/writehost-or-echo.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentations/Stage management.md" beforeDir="false" afterPath="$PROJECT_DIR$/presentations/Stage management.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2GdombNtCv8MVsfHtG0wq0V0niU" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/wvkoppen/Git/wouter/Knowledge/experiments&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/wvkoppen/Git/wouter/Knowledge/playground/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/wvkoppen/Git/wouter/Knowledge/JavaScript/node_modules/typescript/lib&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/experiments" />
+      <recent name="$PROJECT_DIR$/javascript-playground" />
+      <recent name="$PROJECT_DIR$/JavaScript/dist" />
+      <recent name="$PROJECT_DIR$/JavaScript/src" />
+      <recent name="$PROJECT_DIR$/JavaScript" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/experiments" />
+      <recent name="$PROJECT_DIR$/generator" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/JavaScript/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b85acb0b-9ae8-4e0e-beb2-1e654f11914d" name="Changes" comment="" />
+      <created>1666727981711</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666727981711</updated>
+      <workItem from="1666727982875" duration="102000" />
+      <workItem from="1667229097714" duration="659000" />
+      <workItem from="1667230155940" duration="4096000" />
+      <workItem from="1667241576971" duration="3407000" />
+      <workItem from="1667291718661" duration="598000" />
+      <workItem from="1667327676531" duration="3460000" />
+      <workItem from="1667413788867" duration="598000" />
+      <workItem from="1667547979017" duration="16628000" />
+      <workItem from="1670837594407" duration="831000" />
+      <workItem from="1672312256101" duration="132000" />
+      <workItem from="1672664122061" duration="10369000" />
+      <workItem from="1672727362097" duration="2397000" />
+      <workItem from="1672752787121" duration="4026000" />
+      <workItem from="1672857876483" duration="598000" />
+      <workItem from="1672903961665" duration="2055000" />
+      <workItem from="1672946485991" duration="598000" />
+      <workItem from="1672990747783" duration="2013000" />
+      <workItem from="1673022111086" duration="64000" />
+      <workItem from="1673257973577" duration="598000" />
+      <workItem from="1673289081612" duration="661000" />
+      <workItem from="1673338971964" duration="1376000" />
+      <workItem from="1673599232616" duration="649000" />
+      <workItem from="1673637733023" duration="597000" />
+      <workItem from="1674048161553" duration="4372000" />
+      <workItem from="1674068739439" duration="2940000" />
+      <workItem from="1674208931246" duration="2465000" />
+      <workItem from="1674226640015" duration="899000" />
+      <workItem from="1674489190230" duration="598000" />
+      <workItem from="1674539210014" duration="2258000" />
+      <workItem from="1674798980344" duration="2940000" />
+      <workItem from="1674932785627" duration="3133000" />
+      <workItem from="1675106656564" duration="1826000" />
+      <workItem from="1675153689285" duration="13376000" />
+      <workItem from="1675319162137" duration="2513000" />
+      <workItem from="1675441564032" duration="764000" />
+      <workItem from="1675677084373" duration="598000" />
+      <workItem from="1675709148928" duration="599000" />
+      <workItem from="1675765943520" duration="592000" />
+      <workItem from="1675797278704" duration="586000" />
+      <workItem from="1675886314836" duration="599000" />
+      <workItem from="1675926253797" duration="1274000" />
+      <workItem from="1676019037581" duration="598000" />
+      <workItem from="1676039685191" duration="598000" />
+      <workItem from="1676278853200" duration="1198000" />
+      <workItem from="1676360928537" duration="598000" />
+      <workItem from="1676401689110" duration="599000" />
+      <workItem from="1676486564812" duration="599000" />
+      <workItem from="1676539099575" duration="1198000" />
+      <workItem from="1677096876310" duration="618000" />
+      <workItem from="1677143624676" duration="8239000" />
+      <workItem from="1677156538222" duration="6739000" />
+      <workItem from="1677228785358" duration="18429000" />
+      <workItem from="1677329573807" duration="6933000" />
+      <workItem from="1677337661945" duration="4476000" />
+      <workItem from="1677440341021" duration="4863000" />
+      <workItem from="1677530689369" duration="4497000" />
+      <workItem from="1677613166062" duration="6672000" />
+      <workItem from="1677697024491" duration="9483000" />
+      <workItem from="1677962201329" duration="2800000" />
+      <workItem from="1678042610941" duration="9652000" />
+      <workItem from="1678129826363" duration="6916000" />
+      <workItem from="1678136769528" duration="1628000" />
+      <workItem from="1678170831625" duration="12735000" />
+      <workItem from="1678277518696" duration="8942000" />
+      <workItem from="1690905542323" duration="1269000" />
+      <workItem from="1691046153389" duration="2951000" />
+      <workItem from="1691132733307" duration="598000" />
+      <workItem from="1691392273036" duration="598000" />
+      <workItem from="1691475377192" duration="598000" />
+      <workItem from="1694024317840" duration="412000" />
+      <workItem from="1697113507146" duration="1234000" />
+      <workItem from="1697120272814" duration="598000" />
+      <workItem from="1697806457843" duration="1841000" />
+      <workItem from="1697810821209" duration="3435000" />
+      <workItem from="1697814270141" duration="17000" />
+    </task>
+    <task id="LOCAL-00001" summary="Change async-awai">
+      <created>1667231290048</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667231290048</updated>
+    </task>
+    <task id="LOCAL-00002" summary="remove need for index.js">
+      <created>1667232999538</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1667232999538</updated>
+    </task>
+    <task id="LOCAL-00003" summary="improve logging">
+      <created>1667233012707</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1667233012707</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add prettier">
+      <created>1667244152992</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667244152992</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add prettier">
+      <created>1667330020333</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667330020333</updated>
+    </task>
+    <task id="LOCAL-00006" summary="wip">
+      <created>1677096987349</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1677096987349</updated>
+    </task>
+    <task id="LOCAL-00007" summary="wip">
+      <created>1677168355885</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1677168355885</updated>
+    </task>
+    <task id="LOCAL-00008" summary="wip">
+      <created>1677254042437</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1677254042437</updated>
+    </task>
+    <task id="LOCAL-00009" summary="wip">
+      <created>1677275463435</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1677275463435</updated>
+    </task>
+    <task id="LOCAL-00010" summary="wip">
+      <created>1677334047641</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1677334047641</updated>
+    </task>
+    <task id="LOCAL-00011" summary="wip">
+      <created>1677355685007</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1677355685007</updated>
+    </task>
+    <task id="LOCAL-00012" summary="wip">
+      <created>1677443374062</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1677443374062</updated>
+    </task>
+    <task id="LOCAL-00013" summary="wip">
+      <created>1677446447389</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1677446447389</updated>
+    </task>
+    <task id="LOCAL-00014" summary="wip">
+      <created>1677535062395</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1677535062395</updated>
+    </task>
+    <task id="LOCAL-00015" summary="wip">
+      <created>1677620080917</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1677620080917</updated>
+    </task>
+    <task id="LOCAL-00016" summary="wip">
+      <created>1677701102883</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1677701102883</updated>
+    </task>
+    <task id="LOCAL-00017" summary="wip">
+      <created>1677705503578</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1677705503578</updated>
+    </task>
+    <task id="LOCAL-00018" summary="wip">
+      <created>1678050862555</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1678050862555</updated>
+    </task>
+    <task id="LOCAL-00019" summary="wip">
+      <created>1678052984005</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1678052984005</updated>
+    </task>
+    <task id="LOCAL-00020" summary="wip">
+      <created>1678136982066</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1678136982066</updated>
+    </task>
+    <task id="LOCAL-00021" summary="wip">
+      <created>1678138863107</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1678138863107</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Change async-awai" />
+    <MESSAGE value="remove need for index.js" />
+    <MESSAGE value="improve logging" />
+    <MESSAGE value="Add prettier" />
+    <MESSAGE value="wip" />
+    <option name="LAST_COMMIT_MESSAGE" value="wip" />
+  </component>
+</project>

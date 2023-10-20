@@ -1,8 +1,4 @@
-import { demo } from './framework/bootstrapper';
-
-demo(enumerateIterable);
-
-function enumerateIterable() {
+<script type="module">
     const arr = [3, 6, 1, 9];
 
     console.group('forof / iterable');
@@ -16,4 +12,4 @@ function enumerateIterable() {
         console.log(el);
     }
     console.groupEnd();
-}
+</script>

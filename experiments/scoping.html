@@ -1,8 +1,4 @@
-import { demo } from './framework/bootstrapper';
-
-demo(scoping);
-
-function scoping() {
+<script type="module">
     // function anotherFunc() {
     //     const anotherFuncVar = 1;
     //     console.debug('this in anotherFunc', this);
@@ -26,6 +22,11 @@ function scoping() {
     //
     // console.debug(obj.name);
 
-    const o = { x: false, showX: function  () { console.log(this.x) }};
+    const o = {
+        x: false,
+        showX: function () {
+            console.log(this.x);
+        },
+    };
     o.showX();
-}
+</script>

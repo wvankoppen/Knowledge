@@ -1,8 +1,4 @@
-import { demo } from './framework/bootstrapper';
-
-demo(object);
-
-function object() {
+<script type="module">
     const proto = { protoProp: 1 };
 
     const obj = Object.create(proto);
@@ -22,4 +18,4 @@ function object() {
 
     const ownProps = Array.from(obj);
     console.log('only own props', ownProps);
-}
+</script>

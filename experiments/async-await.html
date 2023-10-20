@@ -1,0 +1,31 @@
+<script type="module">
+    let result;
+    delayOneSecond().then((r) => (result = r));
+    console.log(
+        `I am logged too soon (result=${result}), as the above method is not awaited`
+    );
+
+    await delayOneSecond();
+    console.log('I just have been waited');
+
+    // The two is wrapped inside a Promise, because the async keyword
+    console.log('Not just 2, but a Promise', async () => '2');
+    console.log('After 2');
+
+    console.log(await getThree());
+    console.log('After getThree');
+
+    function delayOneSecond() {
+        return new Promise((resolve) => setTimeout(() => resolve('1'), 1_000));
+    }
+
+    async function getThree() {
+        const ret = await new Promise((resolve) =>
+            setTimeout(() => {
+                console.log('creating 3');
+                resolve('3');
+            }, 1000)
+        );
+        return ret;
+    }
+</script>

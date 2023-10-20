@@ -8,7 +8,7 @@ Did you ever have questions like:
 
 I like to give you my personal takeaways on this.
 
-## About me
+# About me
 •Wouter van Koppen
 •36 years old
 •Live in Delft
@@ -17,11 +17,12 @@ I like to give you my personal takeaways on this.
 •Started at Priva in 2013
 Interested in JavaScript, Angular, Reactive programming, State Management
 
-## Outline
-- Intro: What is NgRx? (1 min)  
-- State metrics (6 min)  
-  ( In order to leverage the power of NgRx, it's important to have a solid understanding about the state needed in your app
-the following metrics help with that
+# Outline
+- About me (1 min)  
+- Intro: What is NgRx? (2 min)  
+- State metrics (7 min)  
+  ( In order to leverage the power of NgRx, it's important to have a solid understanding about what kind of state is needed in your app
+the following metrics help to gain insight.
 )
 
   - Immutability & serializability 
@@ -29,13 +30,8 @@ the following metrics help with that
   - Scope (where is which part of state needed, e.g. global, local or somewhere in between)
   - Lifespan (what it is, what it means for architecture)
 
-- NgRx (5 min)
-  (I will show the Store and ComponentStore)
-  - NgRx Store
-  - NgRx ComponentStore
-
 (
-There are no straightforward answers as every app is different.  Though I can help you make the right choice using my takeaways)
+There are no straightforward answers as every app is different. Though I can help you make a sound choice using my takeaways)
 
 - My takeaways for improving architecture: (10 min)
   
@@ -50,6 +46,8 @@ A service having a Subject holding the todo items probably suffices.
 For a complex app though, it can be a decent choice.
 
 In order to make a sound choice for architecting your state, hereby the metrics that you need to think about.
+
+# State metrics
 
 ## State Immutability & serializability
 What is state? -> A representation of what happened so far in our application
@@ -75,7 +73,7 @@ Object -> Promise, Map, Set, ArrayBuffer, Blob, HTMLElement, etc
 ## State scope
 (In how many places in your can a piece of state be used)
 State can be
-- global / app wide (online / offline, current dialog, current panel)
+- global / app wide (online / offline, current dialog , current panel)
 - specific feature of the app (Open a project, this current project context is needed at many places), 
 - local / only needed inside a specific (Container)Component
 
@@ -97,73 +95,8 @@ Short recap of these state metrics: Immutability, serializability, scope, lifesp
 
 
 
-
-
-
-## NgRx Store
-
-Ask: Who knows this diagram? Please raise hand.
-
-Explain ![](https://ngrx.io/generated/images/guide/store/state-management-lifecycle.png)
-
-
-TODO: Global state
-
-1. Single source of truth (Store)
-2. State is read only
-3. Changes are made via pure functions (reducers)
-
-Advantages:
-- Centralized, immutable state (hydrate state via LocalStorage)
-- Performance (OnPush)
-- Tooling! (look whether state correct, no logging)
-- Component communication (inject Store)
-
-
-
-- Each state module contains 
-  - a Store and Reducer(s)
-  - possibly Actions, Effects (and services)
-- Not components, as they are in the View Component Modules
-The components can use the state as their module import the state module.
-
-
-Centralized immutable state
-- Fits well for the hierarchy of your app, pages, routing
-- Tooling (DevTools)
-
-- Immutability & serializability:  The store implements the Redux principles
-- Scope: Wide or small scope
-- Ownership & lifespan: Module-owned, long-lived state
-
-
-What NOT to store:
-State that cannot respect the principles, e.g.:
-- mutual state (Leaflet instance)
-  Nuance: technically you can, by configuration, but you should not use it
-
-
-
-
-
-## NgRx Component store
-
-- Immutability & serializability: Uses the Redux principles
-- Scope: Small scope
-- Ownership & lifespan: Component-owned, short-lived state
-
-  - Fits for components with complex state that need to be instantiated multiple times
-  - Tooling lacking, less scalable but more flexible
-
-
-Explain ![](https://ngrx.io/generated/images/guide/component-store/state-structure.png)
-
-
-
-Short recap: Store vs ComponentStore
-
-
-
+•
+•
 
 
 
@@ -219,10 +152,79 @@ Outcome: A hierarchical, modular separation of your view components
 
 
 
+## Think about State immutability & serializability
+- If pieces of state are mutable, check whether you can make it immutable. If it cannot, eg leaflet, use a Service
+- If pieces of state are unserializable, check whether you can make it serializable (store raw, remove cycles)
+  If you need cyclic data, consider to transform this in a selector or pipe
 
 
 
-## Think about state ownership and lifespan: Module or component?
+## Use NgRx Store for Module-owned state
+
+Ask: Who knows this diagram? Please raise hand.
+
+Explain ![](https://ngrx.io/generated/images/guide/store/state-management-lifecycle.png)
+
+
+
+1. Single source of truth 
+2. State is read only
+3. Changes are made via pure functions (reducers)
+
+Advantages:
+- Centralized, immutable state (hydrate state via LocalStorage)
+- Performance (OnPush)
+- Tooling! (look whether state correct, no logging)
+- Component communication (inject Store)
+
+
+
+- Each state module contains
+  - a Store and Reducer(s)
+  - possibly Actions, Effects (and services)
+- Not components, as they are in the View Component Modules
+  The components can use the state as their module import the state module.
+
+
+Centralized immutable state
+- Fits well for the hierarchy of your app, pages, routing
+- Tooling (DevTools)
+
+- Immutability & serializability:  The store implements the Redux principles
+- Scope: Wide or small scope
+- Ownership & lifespan: Module-owned, long-lived state
+
+
+What NOT to store:
+State that cannot respect the principles, e.g.:
+- mutual state (Leaflet instance)
+  Nuance: technically you can, by configuration, but you should not use it
+
+
+
+
+
+### Use NgRx Component store for component-owned state
+
+- Immutability & serializability: Uses the Redux principles
+- Scope: Small scope
+- Ownership & lifespan: Component-owned, short-lived state
+
+  - Fits for components with complex state that need to be instantiated multiple times
+  - Tooling lacking, less scalable but more flexible
+
+
+Explain ![](https://ngrx.io/generated/images/guide/component-store/state-structure.png)
+
+
+
+
+
+
+
+
+
+
 - For component-owned state, consider NgRx ComponentStore (or an Angular service, declare in ElementInjector)
 - For module-owned state, separate in state modules (imp!) for the app hierarchy (or use standalone API )
 - Separation enables Lazy loading:
@@ -275,10 +277,6 @@ Outcome: Hierarchical state also on folder level!
 
 
 
-## Think about State immutability & serializability
-- If pieces of state are mutable, check whether you can make it immutable. If it cannot, eg leaflet, use a Service
-- If pieces of state are unserializable, check whether you can make it serializable (store raw, remove cycles)
-  If you need cyclic data, consider to transform this in a selector or pipe
 
 
 
@@ -286,10 +284,14 @@ Outcome: Hierarchical state also on folder level!
 # Conclusion:
 State
   - Immutability, Serializability, Scope, Ownership & Lifespan
-NgRx Store and ComponentStore
 
-- Steps for improving architecture:
-  - Design an app hierarchy driven by domain (with module tree and routing)
-  - Think about state ownership and lifespan: Module or component?
-  - Think about state scope
-  - Think about State immutability & serializability
+- Takeaways for improving architecture:
+  1. Design an app hierarchy driven by domain (with module tree and routing)
+  2. Use the NgRx Store for module-owned state
+    - Can be both wide and small-scoped
+    - Usually long-lived 
+  3. Use the NgRx ComponentStore for component-owned state
+    - Only for small-scoped state
+    - Usually short-lived
+  4. Avoid mutable state, when impossible use a Service
+    - Use the Injector to denote scope

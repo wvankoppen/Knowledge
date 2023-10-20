@@ -1,12 +1,8 @@
-import { demo } from './framework/bootstrapper';
-demo(reduce);
-
-function reduce() {
-
+<script type="module">
     console.group('Summation example');
 
     const numbers = [10, 2, 8, 15];
-    const result1= numbers.reduce((acc, curr) => {
+    const result1 = numbers.reduce((acc, curr) => {
         console.log(acc, curr);
         return acc + curr;
     });
@@ -163,4 +159,4 @@ function reduce() {
     generator(tree);
 
     console.log(tree);
-}
+</script>

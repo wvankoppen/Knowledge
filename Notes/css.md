@@ -53,21 +53,20 @@
 
 TODO:
 
- 
 * Functions:
   * minmax(<startfromhere>, <fraction>)
     ◦	minmax(0,1fr) minmax(0,1fr)	◦	Always 2* 50%:
     ◦	minmax(auto,1fr) minmax(auto,1fr)	◦	Each column gets enough, remainer is distributed
     ◦
     ◦	Repeat: repeat track listing
- 
-•	Implicit grid:	•	grid-auto-rows   20px 20px             grid-auto-columns  20px 20px
-    •	Explicit grid	•	grid-template-rows: 1fr 1fr       grid-template-columns: 1fr 1fr
+
+•	Implicit grid:	•	grid-auto-rows 20px 20px grid-auto-columns 20px 20px
+    •	Explicit grid	•	grid-template-rows: 1fr 1fr grid-template-columns: 1fr 1fr
     •	
- 
- 
+
+
 * Vertical-align: for inline elements, eg inline-block
-*  
+
 * CSS Grid:
   * Use named lines to avoid the need to refer to line numbers
   * Lines can have the same name, use an index
@@ -76,10 +75,9 @@ TODO:
     * grid-area: mybox
   * Use ::before and ::after to insert content
   * Use subgrid inside a cell in a parent grid
- 
- 
+
 Flexbox:
- 
+
 Questions:
 * Difference left vs margin-left
 * Float now deprecated? Never use?
