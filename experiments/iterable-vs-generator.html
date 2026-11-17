@@ -1,0 +1,25 @@
+<script type="module">
+    // Create a sequence of numbers via an iterator.
+    const numbersFromIterator = (start) => ({
+        [Symbol.iterator]: () => ({
+            next: () => ({ value: start++, done: start > 10 }),
+        }),
+    });
+
+    // Create a sequence of numbers via a generator.
+    const numbersFromGenerator = function* (start) {
+        yield* new Array(10 - start).fill(null).map((v, i) => i + start);
+    };
+
+    console.group('numbers from iterator');
+    for (let x of numbersFromIterator(2)) {
+        console.log(x);
+    }
+    console.groupEnd();
+
+    console.group('numbers from generator');
+    for (let x of numbersFromGenerator(2)) {
+        console.log(x);
+    }
+    console.groupEnd();
+</script>

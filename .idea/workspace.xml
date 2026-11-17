@@ -4,106 +4,88 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b85acb0b-9ae8-4e0e-beb2-1e654f11914d" name="Changes" comment="webpack">
-      <change afterPath="$PROJECT_DIR$/blogs/hierarchical-state.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/async-await.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/playground/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/playground/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blogs/app-architecture.md" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/app-architecture.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/Basic/default type values.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/Basic/default type values.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/Basic/equality struct.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/Basic/equality struct.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/Basic/equality.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/Basic/equality.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/Basic/overflow.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/Basic/overflow.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/GoF/abstract factory problem.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/GoF/abstract factory problem.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/GoF/adapter.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/GoF/adapter.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/GoF/bridge.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/GoF/bridge.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/GoF/builder with state.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/GoF/builder with state.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/GoF/command.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/GoF/command.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/GoF/state pattern.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/GoF/state pattern.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/LINQ/linq aggregate performance.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/LINQ/linq aggregate performance.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/LINQ/linq performance.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/LINQ/linq performance.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/LINQ/linq query vs expression syntax.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/LINQ/linq query vs expression syntax.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/LINQ/linq why no foreach on ienumerable.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/LINQ/linq why no foreach on ienumerable.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/LINQ/observer.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/LINQ/observer.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/async-await-simple.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/async-await-simple.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/async-await-timeawaiter.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/async-await-timeawaiter.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/async-await.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/async-await.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/closure-functions.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/closure-functions.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/closure-variable.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/closure-variable.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/closure.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/closure.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/constructor base derrived sequence.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/constructor base derrived sequence.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/covariance-contravariance.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/covariance-contravariance.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/delegates.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/delegates.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/dictionary key.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/dictionary key.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/domain-infrastructure-sep-bad.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/domain-infrastructure-sep-bad.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/domain-infrastructure-sep-good.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/domain-infrastructure-sep-good.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/domainmodel-correct.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/domainmodel-correct.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/domainmodel-incorrect.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/domainmodel-incorrect.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/dynamic.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/dynamic.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/events.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/events.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/expressiontree.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/expressiontree.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/infinitive-sequences.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/infinitive-sequences.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/iqueryable.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/iqueryable.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/lazy.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/lazy.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/maybe.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/maybe.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/override-new.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/override-new.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/patterns.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/patterns.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/switch-better.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/switch-better.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/threadpool window over queue.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/threadpool window over queue.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/visitor multiple dispatch.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/visitor multiple dispatch.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/visitor single dispatch.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/visitor single dispatch.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C#/yield difference with list.linq" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/C#/yield difference with list.linq" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/playground/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/.prettierrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/playground/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/playground/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/playground/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/src/async-await.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/src/framework/bootstrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/framework/bootstrapper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/src/generator.js" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/generator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/src/iterable-enumerable.js" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/iterable-enumerable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/src/lib/proxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/lib/proxy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/src/object.js" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/object.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/src/performance.js" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/performance.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/src/prototype.js" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/prototype.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/src/reduce.js" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/reduce.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/src/rxjs.connect.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/rxjs.connect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/src/rxjs.error.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/rxjs.error.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/src/rxjs.hot-timer.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/rxjs.hot-timer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/src/rxjs.producer.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/rxjs.producer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/src/rxjs.sequencer.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/rxjs.sequencer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/src/rxjs.subjects.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/rxjs.subjects.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/src/rxjs.unsubscribe.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground/src/rxjs.unsubscribe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/src/scoping.js" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/scoping.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/src/webcomponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/webcomponent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/playground/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notes/css.md" beforeDir="false" afterPath="$PROJECT_DIR$/Notes/css.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notes/definitions.md" beforeDir="false" afterPath="$PROJECT_DIR$/Notes/definitions.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Powershell/filesearch.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Powershell/foreach-differences.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Powershell/foreach-or-select.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Powershell/start-wait.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Powershell/writehost-or-echo.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentations/Stage management.md" beforeDir="false" afterPath="$PROJECT_DIR$/presentations/Stage management.md" afterDir="false" />
+    <list default="true" id="b85acb0b-9ae8-4e0e-beb2-1e654f11914d" name="Changes" comment="refactor: restructure">
+      <change afterPath="$PROJECT_DIR$/blogs/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/_includes/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/posts/posts.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conferences/2024-frontmania.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conferences/2025-dotjs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/iterable-vs-generator.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notes/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notes/.idea/git_toolbox_blame.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notes/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notes/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notes/tools.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notes/asynchronous-programming.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/asynchronous-programming.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notes/css.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/css.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notes/definitions.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/definitions.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notes/git.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/git.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notes/git/diff.png" beforeDir="false" afterPath="$PROJECT_DIR$/notes/git/diff.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notes/git/phases.png" beforeDir="false" afterPath="$PROJECT_DIR$/notes/git/phases.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notes/modules.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/modules.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notes/npm.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/npm.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notes/promises.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/promises.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notes/rxjs.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/rxjs.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notes/solid.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/solid.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notes/solid/dip.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/notes/solid/dip.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notes/solid/isp.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/notes/solid/isp.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notes/solid/lsp.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/notes/solid/lsp.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notes/solid/ocp.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/notes/solid/ocp.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notes/solid/srp.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/notes/solid/srp.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notes/tools.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/azure-devops.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/app-architecture.md" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/posts/app-architecture.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/hierarchical-state.md" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/posts/hierarchical-state.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/async-await.html" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/async-await.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/generator.html" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/generator.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/Users/wvkoppen/Git/wouter/Knowledge" value="2GdombNtCv8MVsfHtG0wq0V0niU" />
+    </persistenceIdMap>
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="121" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;wvankoppen&quot;
+  }
+}</component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
   </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/wvankoppen/Knowledge.git&quot;,
+    &quot;accountId&quot;: &quot;a94527c0-ba43-4bb5-b1cb-e2074c8ba989&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2GdombNtCv8MVsfHtG0wq0V0niU" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -114,9 +96,13 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/wvkoppen/Git/wouter/Knowledge/experiments&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/wvkoppen/Git/wouter/Knowledge/notes&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -124,21 +110,24 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/wvkoppen/Git/wouter/Knowledge/playground/node_modules/prettier&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/wvkoppen/Git/wouter/Knowledge/JavaScript/node_modules/typescript/lib&quot;
+    &quot;ts.external.directory.path&quot;: &quot;/Users/wvkoppen/Git/wouter/Knowledge/JavaScript/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/notes" />
+      <recent name="$PROJECT_DIR$/conferences" />
       <recent name="$PROJECT_DIR$/experiments" />
+      <recent name="$PROJECT_DIR$/experiments/snippets" />
       <recent name="$PROJECT_DIR$/javascript-playground" />
-      <recent name="$PROJECT_DIR$/JavaScript/dist" />
-      <recent name="$PROJECT_DIR$/JavaScript/src" />
-      <recent name="$PROJECT_DIR$/JavaScript" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/blogs/posts" />
       <recent name="$PROJECT_DIR$/experiments" />
-      <recent name="$PROJECT_DIR$/generator" />
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/experiments/async-await" />
+      <recent name="$PROJECT_DIR$/blogs" />
+      <recent name="$PROJECT_DIR$/experiments/snippets" />
     </key>
   </component>
   <component name="RunManager">
@@ -157,6 +146,13 @@
         <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.31033.133" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -241,6 +237,26 @@
       <workItem from="1697806457843" duration="1841000" />
       <workItem from="1697810821209" duration="3435000" />
       <workItem from="1697814270141" duration="17000" />
+      <workItem from="1697814296334" duration="2332000" />
+      <workItem from="1697823742848" duration="1682000" />
+      <workItem from="1698067088547" duration="6162000" />
+      <workItem from="1698130114354" duration="3607000" />
+      <workItem from="1701186654856" duration="73000" />
+      <workItem from="1706194984689" duration="1626000" />
+      <workItem from="1706280347153" duration="2631000" />
+      <workItem from="1708423042382" duration="667000" />
+      <workItem from="1717180664592" duration="2225000" />
+      <workItem from="1728628816601" duration="309000" />
+      <workItem from="1728629685133" duration="4538000" />
+      <workItem from="1730293685526" duration="648000" />
+      <workItem from="1733150873044" duration="269000" />
+      <workItem from="1741337956454" duration="3911000" />
+      <workItem from="1744028176076" duration="82000" />
+      <workItem from="1744028375365" duration="282000" />
+      <workItem from="1744122987462" duration="141000" />
+      <workItem from="1744294363555" duration="66000" />
+      <workItem from="1744377567481" duration="892000" />
+      <workItem from="1772553060354" duration="909000" />
     </task>
     <task id="LOCAL-00001" summary="Change async-awai">
       <created>1667231290048</created>
@@ -389,7 +405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678138863107</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="refactor: restructure">
+      <created>1697814371521</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1697814371521</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,6 +435,15 @@
     <MESSAGE value="improve logging" />
     <MESSAGE value="Add prettier" />
     <MESSAGE value="wip" />
-    <option name="LAST_COMMIT_MESSAGE" value="wip" />
+    <MESSAGE value="refactor: restructure" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: restructure" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>

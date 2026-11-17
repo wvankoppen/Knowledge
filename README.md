@@ -15,7 +15,7 @@ This repo contains notes I made over the years on various programming topics.
 - SOLID
 - NPM
 
-## C# Playground
+## Experiments
 (runnable examples + notes)
 - Async / await
 - Delegates

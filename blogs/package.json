@@ -1,0 +1,19 @@
+{
+    "name": "blogs",
+    "private": true,
+    "version": "1.0.0",
+    "description": "",
+    "main": "script.js",
+    "scripts": {
+        "start": "eleventy --serve",
+        "fix": "prettier -w ./src"
+    },
+    "author": "Wouter van Koppen <wvkoppen@gmail.com>",
+    "license": "ISC",
+    "dependencies": {
+    },
+    "devDependencies": {
+        "prettier": "^2.7.1",
+        "@11ty/eleventy": "^2.0.1"
+    }
+}
